@@ -5,7 +5,7 @@
 <script>
   export default {
     props: ['caption'],
-    name: 'buttonhut',
+    name: 'buttonhut', 
     methods: {
       click() {
         this.$emit('click');
