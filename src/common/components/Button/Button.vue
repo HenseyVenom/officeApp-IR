@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-block btn-lg btn-hut" v-on:click="click"> {{ caption }} </button>
+  <button class="btn btn-primary btn-lg btn-block btn-hut btn-hut-iza" v-on:click="click"> {{ caption }} </button>
 </template>
 
 <script>
