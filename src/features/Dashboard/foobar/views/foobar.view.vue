@@ -1,5 +1,10 @@
 <template>
 
+    <nav class="navbar">
+       <router-link to="/login"><button-logout type="submit" caption="Log out"></button-logout></router-link>
+    </nav>
+   
+  <!--
   <div>
     <hr/> This is navigation:
     <div style="height: 50px; background-color: yellow; color: hotpink; margin: 20px;">
@@ -11,7 +16,7 @@
     <hr/>
     This is content:
     <router-view></router-view>
-  </div>
+  </div> -->
   
 
 </template>
@@ -26,5 +31,8 @@ export default {
 </script>
 
 <style>
-
+.navbar{
+  background-color: #FC4F29;
+  padding:0px !important;
+}
 </style>
