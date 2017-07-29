@@ -1,11 +1,11 @@
 <template>
-  <button class="btn btn-primary btn-lg btn-block btn-hut" v-on:click="click"> {{ caption }} </button>
+  <button class="btn btn-primary btn-lg btn-block btn-hut btn-hut-robert robert tralala" v-on:click="click"> {{ caption }} </button>
 </template>
 
 <script>
   export default {
     props: ['caption'],
-    name: 'buttonhut',
+    name: 'buttonhut', 
     methods: {
       click() {
         this.$emit('click');
@@ -15,4 +15,8 @@
 </script>
 
 <style>
+.btn-hut {
+  background-color: orange;
+  
+}
 </style>
