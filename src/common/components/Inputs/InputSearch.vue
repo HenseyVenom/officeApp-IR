@@ -1,10 +1,10 @@
 <template>
-  <input class="form-control form-border" v-model="internalModel" v-on:input="change" />
+  <input class="form-box form-control" v-model="internalModel" v-on:input="change" />
 </template>
 
 <script>
   export default {
-    name: 'inputhut',
+    name: 'input-search',
     data: () => ({
       internalModel: '',
     }),
@@ -17,13 +17,15 @@
 </script>
 
 <style>
+.form-box{
+  width: 300px !important;
+  display: inline !important;
+  height: 30px;
+}
 .form-control:focus {
   color: #464a4c;
   background-color: #fff;
   border-color:#FF3300 !important;
   outline: none;
-}
-.form-border{
-  margin-bottom:10px;
 }
 </style>

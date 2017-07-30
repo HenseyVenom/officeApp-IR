@@ -1,9 +1,11 @@
 <template>
 
-    <nav class="navbar">
-       <router-link to="/login"><button-logout type="submit" caption="Log out"></button-logout></router-link>
-    </nav>
-   
+  <nav class="navbar">
+    <input-search type="search" name="search" placeholder="Search" required="" autofocus="" />
+    <router-link to="/login"><button-switch-company type="submit" caption="Switch Company"></button-switch-company></router-link>
+    <router-link to="/login"><button-logout type="submit" caption="Log out"></button-logout></router-link>
+  </nav>
+  
   <!--
   <div>
     <hr/> This is navigation:
@@ -32,7 +34,9 @@ export default {
 
 <style>
 .navbar{
-  background-color: #FC4F29;
+  text-align: right;
+  display: block !important;
   padding:0px !important;
+  background-color: #FC4F29;
 }
 </style>

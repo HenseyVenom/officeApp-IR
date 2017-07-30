@@ -1,7 +1,7 @@
 <template>
-  <button class="btn-logout" v-on:click="click">
-    <!-- <img src="${require(`assets/logout.png`)}"/> -->
-    <img src="assets/logout.png"/>
+  <button class="btn-switch-company" v-on:click="click">
+    <!-- <img src="${require(`assets/shuffle.png`)}"/> -->
+    <img src="assets/shuffle.png"/>
     {{ caption }} 
   </button>
 </template>
@@ -9,7 +9,7 @@
 <script>
   export default {
     props: ['caption'],
-    name: 'button-logout', 
+    name: 'button-switch-company', 
     methods: {
       click() {
         this.$emit('click');
@@ -19,14 +19,14 @@
 </script>
 
 <style>
-.btn-logout{
+.btn-switch-company{
     padding: 10px;
     background-color: #FC4F29;
     margin: 0px;
     border: 0px;
     color: white;
 }
-.btn-logout:hover{
+.btn-switch-company:hover{
     opacity: 0.5;
 }
 </style>

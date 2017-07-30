@@ -5,8 +5,8 @@
         <div class="wrapper">
           <form class="form-signin">    
             <login-header caption="Sign in to your admin account"/>   
-            <inputhut type="text" name="email" placeholder="Email Address" required="" autofocus=""  v-on:change="(e) => this.userLogin = e" />
-            <inputhut type="password" name="password" placeholder="Password" required="" autofocus="" v-on:change="(e) => this.userPassword = e" />    
+            <input-loginpanel type="text" name="email" placeholder="Email Address" required="" autofocus=""  v-on:change="(e) => this.userLogin = e" />
+            <input-loginpanel type="password" name="password" placeholder="Password" required="" autofocus="" v-on:change="(e) => this.userPassword = e" />    
             <label class="checkbox">
               <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label> 
