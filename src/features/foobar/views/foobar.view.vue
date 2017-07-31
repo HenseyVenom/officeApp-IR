@@ -1,24 +1,8 @@
 <template>
   <div>
-      
-        <navigation-bar></navigation-bar>
-        <tool-bar></tool-bar>
-      
-        
-
-
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-     
-    
+    <navigation-bar-top></navigation-bar-top>
+    <navigation-bar-bottom></navigation-bar-bottom>
+    <router-view></router-view>
   </div>
   <!--
   <div>
@@ -33,8 +17,6 @@
     This is content:
     <router-view></router-view>
   </div> -->
-  
-
 </template>
 
 
@@ -47,12 +29,5 @@ export default {
 </script>
 
 <style>
-.tool-bar{
-  width: 10%;
-  height: 60%;
-}
-.work{
-  width: 90%;
-  backgroud-color: black !important ;
-}
+
 </style>
