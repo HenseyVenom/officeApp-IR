@@ -1,21 +1,23 @@
 <template>
     <select id="select" name="select" class="form-control form-border">
-        <option>{{ options }}</option>
-        <option>{{ options }}</option>
-        <option>{{ options }}</option>
+        <option>{{ option0 }}</option>
+        <option>{{ option1 }}</option>
+        <option>{{ option2 }}</option>
+        <option>{{ option3 }}</option>
     </select>
 </template>
 
 <script>
 export default {
-    el: '#select',
-    data: {
-        internalModel: ['a', 'b', 'c']
-    },
     name: 'input-select',
-    data: () => ({
-        internalModel: ''
-    }),
+    data: () => {
+        return {
+            option0: '',
+            option1: 'guest',
+            option2: 'employer',
+            option3: 'employee'
+        };
+    },
     methods: {
         change() {
             this.$emit('change', this.internalModel);

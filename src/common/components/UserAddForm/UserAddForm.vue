@@ -17,7 +17,8 @@
     <input-loginpanel></input-loginpanel>
     <label>Position</label>  
     <input-loginpanel></input-loginpanel>
-    
+    <label>Office</label>  
+    <input-select></input-select>
 </form>
 </div>
   
@@ -27,8 +28,15 @@
 <script>
   export default {
     name: 'useraddform', 
-  };
-  
+    data: () => {
+        return {
+            option0: '',
+            option1: 'test1',
+            option2: 'test2',
+            option3: 'test3'
+        };
+  }
+  }
 </script>
 
 <style>

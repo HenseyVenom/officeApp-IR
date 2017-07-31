@@ -9,12 +9,14 @@
   <script>
 export default {
     name: 'input-checkbox',
-    data: () => ({
-        internalModel: '',
-    }),
+    data: () => {
+        return {
+            checkedNames: 'iza'
+        };
+    },
     methods: {
         change() {
-            this.$emit('change', this.internalModel);
+            this.$emit('change', this.internalModel)
         },
     },
 };
