@@ -1,14 +1,12 @@
 <template>
 
-  <div class="tool-bar">
-    <router-link to="/login"><tool-item></tool-item></router-link>
-    <tool-item></tool-item>
-    <tool-item></tool-item>
-    <tool-item></tool-item>
-    <tool-item></tool-item>
-    <tool-item></tool-item>
-    <tool-item></tool-item>
-  </div>
+  <nav class="navbar navbar-top">
+    <input-search type="search" name="search" placeholder="Search" required="" autofocus="" /> 
+    <router-link to="/login"><button-switch-company type="submit" caption="Switch Company"></button-switch-company></router-link>
+    <router-link to="/login"><button-logout type="submit" caption="Log out"></button-logout></router-link>
+  </nav>
+
+
   
   <!--
   <div>
@@ -30,16 +28,15 @@
 
 <script>
   export default {
-    name: 'tool-bar', 
+    name: 'navigation-bar-top', 
   };
 </script>
 
 <style>
-.tool-bar{
+.navbar-top{
+  text-align: right;
   display: block !important;
-  padding:5px;
-  margin:0px;
-  background-color: #222d32;
-  color: white;
+  padding: 0px !important;
+  background-color: #FF3300;
 }
 </style>

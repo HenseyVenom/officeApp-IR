@@ -18,7 +18,7 @@
 
 <style>
 .form-box{
-  width: 300px !important;
+  width: 280px !important;
   display: inline !important;
   height: 30px;
 }
