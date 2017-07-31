@@ -30,11 +30,10 @@ const getRules = () => [
   {
     test: /\.css$/,
     use: ExtractTextPlugin.extract({
-         fallback: 'style-loader',
-         use: 'css-loader',
-    })
-  },  
-  {
+      fallback: 'style-loader',
+      use: 'css-loader',
+    }),
+  }, {
     test: /\.jsx?$/,
     exclude: [/node_modules/],
     use: [{
@@ -90,9 +89,10 @@ const getPlugins = () => {
       disable: environment === ENV.DEVELOPMENT,
     }),
     new webpack.ProvidePlugin({ // inject ES5 modules as global vars
-        $: 'jquery',
-        jQuery: 'jquery','window.jQuery': 'jquery',
-        Tether: 'tether'
+      $: 'jquery',
+      jQuery: 'jquery', 
+      'window.jQuery': 'jquery',
+      Tether: 'tether'  
     }),
   ];
 

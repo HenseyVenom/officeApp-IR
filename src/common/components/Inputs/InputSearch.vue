@@ -6,7 +6,7 @@
   export default {
     name: 'input-search',
     data: () => ({
-      internalModel: '',
+      internalModel: ''
     }),
     methods: {
       change() {

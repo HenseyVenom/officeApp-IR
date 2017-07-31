@@ -9,7 +9,9 @@ import LoginHeader from './LoginHeader/LoginHeader.vue';
 import NavigationBar from './NavigationBar/NavigationBar.vue';
 import ToolBar from './ToolBar/ToolBar.vue';
 import ToolBarItem from './ToolBar/ToolBarItem.vue';
-//import UserAddForm from '.UserAddForm/UserAddForm.vue';
+import UserAddForm from './UserAddForm/UserAddForm.vue';
+import InputSelect from './Inputs/InputSelect.vue';
+import InputCheckBox from './Inputs/InputCheckBox.vue';
 
 Vue.component(ButtonSignIn.name, ButtonSignIn);
 Vue.component(InputLoginPanel.name, InputLoginPanel);
@@ -20,4 +22,6 @@ Vue.component(ButtonSwitchCompany.name, ButtonSwitchCompany);
 Vue.component(NavigationBar.name, NavigationBar);
 Vue.component(ToolBar.name, ToolBar);
 Vue.component(ToolBarItem.name, ToolBarItem);
-//Vue.component(UserAddForm.name, UserAddForm);
+Vue.component(UserAddForm.name, UserAddForm);
+Vue.component(InputSelect.name, InputSelect);
+Vue.component(InputCheckBox.name, InputCheckBox);

@@ -10,6 +10,7 @@
         <tool-bar></tool-bar>
       </div>
       <div class="col-xs-10 col-sm-9 col-md-10 hidden-xs-down work">
+        <useraddform></useraddform>
       </div> 
     </div>
     
