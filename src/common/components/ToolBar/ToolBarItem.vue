@@ -1,5 +1,5 @@
 <template>
-  <div class="tool-item" v-on:click="click"><img src="assets/shuffle.png"/></div>
+  <div class="tool-item" v-on:click="click"><img src="assets/mouse-arrow.png"/> Users</div>
 </template>
 
 <script>
@@ -16,7 +16,7 @@
 <style>
 .tool-item{
     height: 40px;
-    padding: 3px;
+    padding: 8px;
     background-color: #222d32;
     margin-top: 10px;
     margin-bottom: 10px;

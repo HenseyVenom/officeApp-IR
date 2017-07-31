@@ -1,17 +1,21 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
+      
         <navigation-bar></navigation-bar>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-2 col-sm-2 col-md-2 hidden-xs-down">
         <tool-bar></tool-bar>
-      </div>
-      <div class="col-xs-10 col-sm-9 col-md-10 hidden-xs-down work">
-      </div> 
-    </div>
+      
+        
+
+
+      
+        
+      
+    
+    
+    
+      
+      
+    
     
      
     
@@ -43,11 +47,12 @@ export default {
 </script>
 
 <style>
-.container-fluid{
-  padding: 0px !important;
-  margin: 0px !important;
+.tool-bar{
+  width: 10%;
+  height: 60%;
 }
 .work{
+  width: 90%;
   backgroud-color: black !important ;
 }
 </style>
