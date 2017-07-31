@@ -21,7 +21,7 @@
 <style>
 .btn-switch-company{
     padding: 10px;
-    background-color: #FC4F29;
+    background-color: #FF3300;
     margin: 0px;
     border: 0px;
     color: white;

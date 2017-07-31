@@ -25,11 +25,9 @@
 
 
 <script>
-
-export default {
-
-};
-
+  export default {
+    name: 'navigation-bar', 
+  };
 </script>
 
 <style>
@@ -37,6 +35,6 @@ export default {
   text-align: right;
   display: block !important;
   padding:0px !important;
-  background-color: #FC4F29;
+  background-color: #FF3300;
 }
 </style>
