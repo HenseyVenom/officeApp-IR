@@ -36,7 +36,6 @@
 
 <style>
 .tool-bar{
-  height: 90%;
   display: block !important;
   padding:5px;
   margin:0px;

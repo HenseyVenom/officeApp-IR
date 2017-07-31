@@ -34,7 +34,7 @@
 .navbar{
   text-align: right;
   display: block !important;
-  padding:0px !important;
+  padding: 0px !important;
   background-color: #FF3300;
 }
 </style>
