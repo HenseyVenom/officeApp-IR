@@ -1,6 +1,7 @@
 <template>
   <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       
         <navigation-bar></navigation-bar>
         <tool-bar></tool-bar>
@@ -28,6 +29,11 @@
     
      
     
+=======
+    <navigation-bar-top></navigation-bar-top>
+    <navigation-bar-bottom></navigation-bar-bottom>
+    <router-view></router-view>
+>>>>>>> 3ec3b25ff619ba6aaa1c49e9ae206f661e35b2b2
 =======
     <navigation-bar-top></navigation-bar-top>
     <navigation-bar-bottom></navigation-bar-bottom>
