@@ -1,17 +1,5 @@
 <template>
-    <!-- <div id="app" class="ui vertical stripe segment">
-            <div class="ui container">
-                <div id="content" class="ui basic segment">
-                    <h3 class="ui header">List of Users</h3>
-                    <vuetable
-                        api-url="http://localhost:4040/api/users"
-                        table-wrapper="#content"
-                        :fields="columns"
-                        :item-actions="itemActions"
-                    ></vuetable>
-                </div>
-            </div>
-      </div> -->
+  <useraddform></useraddform>
 </template>
 
 

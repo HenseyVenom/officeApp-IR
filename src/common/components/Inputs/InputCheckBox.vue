@@ -1,21 +1,18 @@
  <template>
     <div id="test" class="form-check">
-        <input type="checkbox" id="checkbox" value="" v-model="checkedNames">
-        <label for="checkbox">{{ checkedNames }}</label>
+        <label for="checkbox">{{ caption }}</label>
+        <br/>
+        <input type="checkbox" id="checkbox" value="">
     </div>
 </template>
 
   <script>
 export default {
+    props: ['caption'],
     name: 'input-checkbox',
-    data: () => {
-        return {
-            checkedNames: 'true'
-        };
-    },
     methods: {
         change() {
-            this.$emit('change', this.internalModel)
+            this.$emit('change', this.internalModel);
         },
     },
 };

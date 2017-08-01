@@ -8,9 +8,9 @@
     <label>E-mail</label>  
     <input-loginpanel></input-loginpanel>
     <label>Role</label>  
-    <input-select></input-select>
-    <input-checkbox></input-checkbox>
-    <input-checkbox></input-checkbox>
+    <input-select option="iza"></input-select>
+    <input-checkbox caption="Accepted"></input-checkbox>
+    <input-checkbox caption="Enable" checked></input-checkbox>
     <label>Description</label>  
     <input-loginpanel></input-loginpanel>
     <label>Phone</label>  
