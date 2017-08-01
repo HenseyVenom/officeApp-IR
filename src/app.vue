@@ -13,12 +13,14 @@ import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 import Bootstrap from 'bootstrap';
 require('bootstrap-sass');
 import Jquery from 'jquery';
-//import VueTable from 'vuetable/dist/vue-table.js';
+//import Vuetify from 'vuetify/dist/vuetify.js';
+//import Vuetifycss from 'vuetify/dist/vuetify.min.css';
 Vue.use(VueRouter);
+//Vue.use(Vuetify);
 const routes = [
   {
     path: '/',
-    redirect(/* routeInfo */) {
+     redirect(/* routeInfo */) {
       /*
         example:
         if (someService.loggedIn) {

@@ -2,6 +2,8 @@ import FoobarView from './views/foobar.view.vue';
 import AlphaView from './views/alpha.view.vue';
 import BravoView from './views/bravo.view.vue';
 import userTable from './views/userTable.view.vue';
+import userAdd from './views/UserAddForm.vue';
+
 
 export default [
   {
@@ -24,6 +26,11 @@ export default [
         name: 'foo.userTable',
         path: 'userTable',
         component: userTable,
+      },
+      {
+        name: 'foo.userAdd',
+        path: 'useradd',
+        component: userAdd,
       },
     ],
   },
