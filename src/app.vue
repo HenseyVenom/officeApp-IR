@@ -13,6 +13,7 @@ import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 import Bootstrap from 'bootstrap';
 require('bootstrap-sass');
 import Jquery from 'jquery';
+//import VueTable from 'vuetable/dist/vue-table.js';
 Vue.use(VueRouter);
 const routes = [
   {

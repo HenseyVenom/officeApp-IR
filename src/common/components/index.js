@@ -9,8 +9,8 @@ import LoginHeader from './LoginHeader/LoginHeader.vue';
 import NavigationBarTop from './NavigationBar/NavigationBarTop.vue';
 import NavigationBarBottom from './NavigationBar/NavigationBarBottom.vue';
 import NavigationItem from './NavigationBar/NavigationItem.vue';
-
 //import UserAddForm from '.UserAddForm/UserAddForm.vue';
+//tralalal
 
 Vue.component(ButtonSignIn.name, ButtonSignIn);
 Vue.component(InputLoginPanel.name, InputLoginPanel);

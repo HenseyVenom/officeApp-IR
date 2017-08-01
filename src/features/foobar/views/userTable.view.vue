@@ -1,50 +1,55 @@
 <template>
-<div class="containe"> 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Imię</th>
-      <th>Nazwisko</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Jan</td>
-      <td>Kowalski</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Jakub</td>
-      <td>Nowak</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Janina</td>
-      <td>Kowalska</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Ewa</td>
-      <td>Nowak</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Tomasz</td>
-      <td>Nowak</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+<!-- <div id="app" class="ui vertical stripe segment">
+        <div class="ui container">
+            <div id="content" class="ui basic segment">
+                <h3 class="ui header">List of Users</h3>
+                <vuetable
+                    api-url="http://localhost:4040/api/users"
+                    table-wrapper="#content"
+                    :fields="columns"
+                    :item-actions="itemActions"
+                ></vuetable>
+            </div>
+        </div>
+  </div> -->
 </template>
 
 
 <script>
-  export default {
-    name: 'userTable', 
-  };
+/*import Vue from 'vue';
+    new Vue({
+          name: 'userTable',
+	        el: '#app',
+	        data: {
+	            columns: [
+	                'id',
+	                'name',
+	                'surname',
+	                '__actions'
+				],
+	            itemActions: [
+	                { name: 'view-item', label: '', icon: 'zoom icon', class: 'ui teal button' },
+	                { name: 'edit-item', label: '', icon: 'edit icon', class: 'ui orange button'},
+	                { name: 'delete-item', label: '', icon: 'delete icon', class: 'ui red button' }
+	            ]
+	        },
+	        methods: {
+	            viewProfile: function(id) {
+	                console.log('view profile with id:', id)
+	            }
+	        },
+	        events: {
+	            'vuetable:action': function(action, data) {
+	                console.log('vuetable:action', action, data)
+	                if (action == 'view-item') {
+	                    this.viewProfile(data.id)
+	                }
+	            },
+	            'vuetable:load-error': function(response) {
+	                console.log('Load Error: ', response)
+	            }
+	        }
+        }) */
 </script>
 
 <style>
