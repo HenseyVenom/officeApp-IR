@@ -12,6 +12,7 @@ import NavigationItem from './NavigationBar/NavigationItem.vue';
 import UserAddForm from './Forms/UserAddForm.vue';
 import InputSelect from './Inputs/InputSelect.vue';
 import InputCheckBox from './Inputs/InputCheckBox.vue';
+import InputAddFile from './Inputs/InputAddFile.vue';
 import OfficeAddForm from './Forms/OfficeAddForm.vue';
 
 
@@ -27,5 +28,6 @@ Vue.component(NavigationItem.name, NavigationItem);
 Vue.component(UserAddForm.name, UserAddForm);
 Vue.component(InputSelect.name, InputSelect);
 Vue.component(InputCheckBox.name, InputCheckBox);
+Vue.component(InputAddFile.name, InputAddFile);
 Vue.component(OfficeAddForm.name, OfficeAddForm);
 

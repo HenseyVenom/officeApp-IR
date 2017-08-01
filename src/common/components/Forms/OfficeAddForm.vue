@@ -8,8 +8,7 @@
     <label>Location</label>  
     <input-loginpanel></input-loginpanel>
     <input-checkbox caption="Enable" checked></input-checkbox>
-    <label>Image</label><br/>
-    <input type="file">
+    <input-addfile content="Image"></input-addfile>
 </form>
 </div>
   
