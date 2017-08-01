@@ -1,0 +1,27 @@
+<template>
+<div>
+  <form class="form-control col-md-5">
+    <label>Name</label>  
+    <input-loginpanel></input-loginpanel>
+    <label>Description</label>  
+    <input-loginpanel></input-loginpanel>
+    <label>Location</label>  
+    <input-loginpanel></input-loginpanel>
+    <input-checkbox caption="Enable" checked></input-checkbox>
+    <label>Image</label><br/>
+    <input type="file">
+</form>
+</div>
+  
+</template>
+
+
+<script>
+  export default {
+    name: 'officeaddform', 
+ 
+  }
+</script>
+
+<style>
+</style>

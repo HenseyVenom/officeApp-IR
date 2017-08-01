@@ -8,7 +8,7 @@
     <label>E-mail</label>  
     <input-loginpanel></input-loginpanel>
     <label>Role</label>  
-    <input-select option="iza"></input-select>
+    <input-select v-bind:options="options"></input-select>
     <input-checkbox caption="Accepted"></input-checkbox>
     <input-checkbox caption="Enable" checked></input-checkbox>
     <label>Description</label>  
@@ -18,7 +18,7 @@
     <label>Position</label>  
     <input-loginpanel></input-loginpanel>
     <label>Office</label>  
-    <input-select></input-select>
+    <input-select v-bind:options="options2"></input-select>
 </form>
 </div>
   
@@ -30,10 +30,12 @@
     name: 'useraddform', 
     data: () => {
         return {
-            option0: '',
-            option1: 'test1',
-            option2: 'test2',
-            option3: 'test3'
+          options: [
+          '', 'guest', 'employer', 'employee'
+          ],
+          options2: [
+          '', 'test office1', 'test office2'
+          ]
         };
   }
   }
