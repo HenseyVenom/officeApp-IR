@@ -6,7 +6,7 @@
       <input-loginpanel></input-loginpanel>
       <label>Description</label>
       <input-loginpanel></input-loginpanel>
-      <label>Office</label>  
+      <label>Office</label>
       <input-select v-bind:options="options"></input-select>
       <label>Sort Order</label>
       <input-loginpanel></input-loginpanel>
@@ -14,8 +14,10 @@
       <input-addfile content="Base Map"></input-addfile>
       <input-addfile content="Detail Item Map"></input-addfile>
       <input-addfile content="Area Map"></input-addfile>
+      <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
+      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
     </form>
-    <buttonhut class="btn btn-sm" caption="Save"></buttonhut>
+  
   </div>
 </template>
 

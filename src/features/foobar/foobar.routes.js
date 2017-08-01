@@ -1,9 +1,11 @@
 import FoobarView from './views/foobar.view.vue';
 import AlphaView from './views/alpha.view.vue';
 import BravoView from './views/bravo.view.vue';
-import userTable from './views/users/userTable.view.vue';
-import officeTable from './views/offices/officeTable.view.vue';
-import levelTable from './views/level/levelTable.view.vue';
+import userTable from './views/userTable.view.vue';
+import userAdd from './views/UserAddForm.vue';
+import officeTable from './views/officeTable.view.vue';
+import levelTable from './views/levelTable.view.vue';
+
 
 export default [
   {
@@ -26,6 +28,11 @@ export default [
         name: 'foo.userTable',
         path: 'userTable',
         component: userTable,
+      },
+      {
+        name: 'foo.userAdd',
+        path: 'userAdd',
+        component: userAdd,
       },
       {
         name: 'foo.officeTable',

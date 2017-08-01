@@ -20,6 +20,8 @@
       <input-loginpanel></input-loginpanel>
       <label>Office</label>
       <input-select v-bind:options="options2"></input-select>
+      <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
+      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
     </form>
   </div>
 </template>

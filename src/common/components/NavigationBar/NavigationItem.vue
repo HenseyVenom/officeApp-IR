@@ -1,7 +1,5 @@
 <template>
   <button class="btn-navitem" v-on:click="click">
-    <!-- <img src="${require(`assets/shuffle.png`)}"/> 
-      <img src="assets/shuffle.png"/> -->
     {{ caption }}
   </button>
 </template>

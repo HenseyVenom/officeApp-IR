@@ -1,19 +1,23 @@
 <template>
-  <router-view></router-view>
+  <router-view>
+  </router-view>
 </template>
 
 <script>
 import Vue from 'vue';
 import VueRouter from 'vue-router/dist/vue-router';
 import LoginRoutes from 'features/Login/login.routes';
-import FoobarRoutes from  'features/foobar/foobar.routes';
+import FoobarRoutes from 'features/foobar/foobar.routes';
 import 'common/components'; // same as from '../../../common/components/index.js';
 import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 //import BootstrapJS from 'bootstrap/dist/js/bootstrap.js';
 import Bootstrap from 'bootstrap';
 require('bootstrap-sass');
 import Jquery from 'jquery';
+import Vuetify from 'vuetify/dist/vuetify.js';
+import Vuetifycss from 'vuetify/dist/vuetify.min.css';
 Vue.use(VueRouter);
+Vue.use(Vuetify);
 const routes = [
   {
     path: '/',

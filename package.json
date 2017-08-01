@@ -12,11 +12,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
     "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-table": "^1.11.2",
     "file": "^0.2.2",
     "lodash": "^4.17.4",
     "vue": "^2.2.6",
-    "vue-router": "^2.4.0"
+    "vue-router": "^2.7.0",
+    "vuetable": "^1.5.12",
+    "vuetify": "^0.14.7",
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

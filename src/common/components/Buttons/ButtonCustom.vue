@@ -19,6 +19,7 @@
   color: #FFFFFF; 
   background-color: #FF3300; 
   border-color: #FFFFFF; 
+  margin-top: 20px;
 } 
  
 .btn-hut:hover, 

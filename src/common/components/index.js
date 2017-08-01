@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import ButtonSignIn from './Buttons/ButtonSignIn.vue';
+import ButtonCustom from './Buttons/ButtonCustom.vue';
 import ButtonLogOut from './Buttons/ButtonLogOut.vue';
 import ButtonSwitchCompany from './Buttons/ButtonSwitchCompany.vue';
 import InputLoginPanel from './Inputs/InputLoginPanel.vue';
@@ -17,7 +17,7 @@ import OfficeAddForm from './Forms/OfficeAddForm.vue';
 import LevelAddForm from './Forms/LevelAddForm.vue';
 
 
-Vue.component(ButtonSignIn.name, ButtonSignIn);
+Vue.component(ButtonCustom.name, ButtonCustom);
 Vue.component(InputLoginPanel.name, InputLoginPanel);
 Vue.component(InputSearch.name, InputSearch);
 Vue.component(LoginHeader.name, LoginHeader);

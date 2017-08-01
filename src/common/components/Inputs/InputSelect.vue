@@ -28,7 +28,4 @@ export default {
     outline: none;
 }
 
-.form-border {
-    margin-bottom: 20px;
-}
 </style>
