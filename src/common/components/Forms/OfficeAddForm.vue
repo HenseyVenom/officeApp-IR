@@ -1,6 +1,7 @@
 <template>
 <div>
   <form class="form-control col-md-5">
+    <legend>Add office</legend>
     <label>Name</label>  
     <input-loginpanel></input-loginpanel>
     <label>Description</label>  

@@ -1,6 +1,7 @@
 <template>
   <div>
     <form class="form-control col-md-5">
+      <legend>Add level</legend>
       <label>Name</label>
       <input-loginpanel></input-loginpanel>
       <label>Description</label>
@@ -14,6 +15,7 @@
       <input-addfile content="Detail Item Map"></input-addfile>
       <input-addfile content="Area Map"></input-addfile>
     </form>
+    <buttonhut class="btn btn-sm" caption="Save"></buttonhut>
   </div>
 </template>
 
