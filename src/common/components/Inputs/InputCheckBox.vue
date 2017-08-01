@@ -2,7 +2,6 @@
     <div id="test" class="form-check">
         <input type="checkbox" id="checkbox" value="" v-model="checkedNames">
         <label for="checkbox">{{ checkedNames }}</label>
-    
     </div>
 </template>
 
@@ -11,7 +10,7 @@ export default {
     name: 'input-checkbox',
     data: () => {
         return {
-            checkedNames: 'iza'
+            checkedNames: 'true'
         };
     },
     methods: {

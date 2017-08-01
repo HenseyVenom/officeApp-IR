@@ -1,44 +1,9 @@
 <template>
   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-        <navigation-bar></navigation-bar>
-        <tool-bar></tool-bar>
-<<<<<<< HEAD
-      </div>
-      <div class="col-xs-10 col-sm-9 col-md-10 hidden-xs-down work">
-        <useraddform></useraddform>
-      </div> 
-    </div>
-=======
-      
-        
-
-
-      
-        
-      
-    
-    
-    
-      
-      
-    
->>>>>>> ee2a026bfa14c85f0947fd223f7a308928b588c2
-    
-     
-    
-=======
     <navigation-bar-top></navigation-bar-top>
     <navigation-bar-bottom></navigation-bar-bottom>
+   <useraddform></useraddform>
     <router-view></router-view>
->>>>>>> 3ec3b25ff619ba6aaa1c49e9ae206f661e35b2b2
-=======
-    <navigation-bar-top></navigation-bar-top>
-    <navigation-bar-bottom></navigation-bar-bottom>
-    <router-view></router-view>
->>>>>>> 3ec3b25ff619ba6aaa1c49e9ae206f661e35b2b2
   </div>
   <!--
   <div>
@@ -57,13 +22,9 @@
 
 
 <script>
-
 export default {
-
 };
-
 </script>
 
 <style>
-
 </style>
