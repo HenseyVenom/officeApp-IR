@@ -1,34 +1,34 @@
 <template>
-
-<div class="containe">
-<router-link to="/foo/userAdd" class="tools"> <img src="assets/add.png"/></router-link>
-<table class="table table-hover">
-  <thead class="table-title">
-    <tr>
-	  <th>Id</th>
-      <th>Name</th>
-      <th>Surname</th>
-	  <th>E-mail</th>
-	  <th>Role</th>
-	  <th>Accepted</th>
-	  <th>White</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="user in users">
-	  <td>{{user.id}}</td>
-      <td>{{user.name}}</td>
-	  <td>{{user.surname}}</td>
-	  <td>{{user.email}}</td>
-	  <td>{{user.role}}</td>
-	  <td>{{user.accepted}}</td>
-	  <td>{{user.white}}</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+  <div class="containe">
+    <router-link to="/foo/userAdd" class="tools">
+      <img src="assets/add.png" />
+    </router-link>
+    <table class="table table-hover">
+      <thead class="table-title">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>E-mail</th>
+          <th>Role</th>
+          <th>Accepted</th>
+          <th>White</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="user in users" v-bind:key="user.id">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role}}</td>
+          <td>{{user.accepted}}</td>
+          <td>{{user.white}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
-
 
 
  <script>
@@ -63,22 +63,40 @@ export default {
     })
   }
 };
-</script>
 
-      
+</script> 
+
+<!--<script>
+// mapState is a helper function provided by vuex to simplify the creation of these objects. 
+// The end result is exactly the same, feel free to use whatever is more comfortable.
+import { mapState } from 'vuex';
+export default {
+  name: 'userTable',
+  computed: mapState([
+    'users'
+  ]),
+  // return this.$store.state.projects
+};
+</script>   -->   
 
 
 <style>
-.containe{
-    text-align: center;
-    padding: 50px;
-    margin: 50px;
+.containe {
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: auto; 
 }
-.table-title{
-	background-color: #303030;
-	color: white;;
+
+
+.table-title {
+  background-color: #303030;
+  color: white;
+  ;
 }
-.tools{
+
+.tools {
   text-align: right;
   display: block !important;
   padding: 10px !important;
