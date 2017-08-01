@@ -4,7 +4,6 @@
     <router-link to="/foo/alpha">
       <navigation-bar-bottom></navigation-bar-bottom>
     </router-link>
-    <!-- <useraddform></useraddform> -->
     <router-view></router-view>
   </div>
   

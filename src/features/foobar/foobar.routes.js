@@ -3,6 +3,7 @@ import AlphaView from './views/alpha.view.vue';
 import BravoView from './views/bravo.view.vue';
 import userTable from './views/users/userTable.view.vue';
 import officeTable from './views/offices/officeTable.view.vue';
+import levelTable from './views/level/levelTable.view.vue';
 
 export default [
   {
@@ -30,6 +31,11 @@ export default [
         name: 'foo.officeTable',
         path: 'officeTable',
         component: officeTable,
+      },
+      {
+        name: 'foo.levelTable',
+        path: 'levelTable',
+        component: levelTable,
       },
     ],
   },

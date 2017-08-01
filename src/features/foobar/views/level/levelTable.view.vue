@@ -1,12 +1,12 @@
-
 <template>
-  <div>Bravo!</div>
+  <leveladdform></leveladdform>
 </template>
 
+
 <script>
-export default {
-};
+
 </script>
 
 <style>
+
 </style>
