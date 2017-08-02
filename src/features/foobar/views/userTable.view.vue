@@ -65,8 +65,8 @@ export default {
 };
 
 </script> 
-
-<!--<script>
+<!--
+<script>
 // mapState is a helper function provided by vuex to simplify the creation of these objects. 
 // The end result is exactly the same, feel free to use whatever is more comfortable.
 import { mapState } from 'vuex';
@@ -77,7 +77,7 @@ export default {
   ]),
   // return this.$store.state.projects
 };
-</script>   -->   
+</script> -->   
 
 
 <style>

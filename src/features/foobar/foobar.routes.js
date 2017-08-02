@@ -3,6 +3,8 @@ import AlphaView from './views/alpha.view.vue';
 import BravoView from './views/bravo.view.vue';
 import userTable from './views/userTable.view.vue';
 import userAdd from './views/UserAddForm.vue';
+import officeAdd from './views/OfficeAddForm.vue';
+import levelAdd from './views/LevelAddForm.vue';
 
 
 export default [
@@ -31,6 +33,16 @@ export default [
         name: 'foo.userAdd',
         path: 'useradd',
         component: userAdd,
+      },
+      {
+        name: 'foo.officeAdd',
+        path: 'officeaddform',
+        component: officeAdd,
+      },
+      {
+        name: 'foo.levelAdd',
+        path: 'leveladdform',
+        component: levelAdd,
       },
     ],
   },

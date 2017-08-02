@@ -1,8 +1,7 @@
 <template>
     <div id="test" class="form-check">
-        <label for="checkbox">{{ caption }}</label>
-        <br/>
         <input type="checkbox" id="checkbox" value="">
+        <label for="checkbox">{{ caption }}</label>
     </div>
 </template>
 
