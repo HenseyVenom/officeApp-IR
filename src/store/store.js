@@ -2,22 +2,48 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
+import axios from 'axios';
 
 Vue.use(Vuex);
 
-// the root, initial state object
-const state = {
-  users: [],
-};
+// Create the Vuex instance by combining the state actions mutations getters and modules objects
+// Then export the Vuex store for use by components in our awesome Vue application
+const store = new Vuex.Store({
 
-// define the possible mutations that can be applied to our state
-const mutations = {
+  // This is where you define the data structure of your application.
+  // You can also set default or initial state here.
+  state: {
+    users: [],
+  },
 
-};
+  // Actions are where you define the calls that will commit changes to your store.
+  actions: {
+    LOAD_USERS_LIST({ commit }) {
+      axios.post('http://localhost:4040/api/users').then((response) => {
+        commit('SET_USERS_LIST', { list: response.data });
+      }, (err) => {
+        console.log(err);
+      });
+    },
+  },
 
-// create the Vuex instance by combining the state and mutations objects
-// then export the Vuex store for use by our components
-export default new Vuex.Store({
-  state,
-  mutations,
+  // The mutations calls are the only place that the store can be updated.
+  mutations: {
+    SET_PROJECT_LIST: (state, { list }) => {
+      state.users = list;
+    },
+  },
+
+  // Getters are a way to grab computed data from the store
+  // For example if you have a project list one component might only want to show projects
+  // that are completed
+  getters: {
+  },
+
+  // As your application grows this is a good way to organize your codebase
+  modules: {
+  },
+
 });
+
+export default store;

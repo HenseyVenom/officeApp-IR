@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="user in users" v-bind:key="user">
+        <tr v-for="user in users" v-bind:key="user.id">
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
           <td>{{user.surname}}</td>
@@ -31,56 +31,66 @@
 </template>
 
 
-
  <script>
 import axios from 'axios';
 export default {
   name: 'userTable',
-  data() {
+  data(){
     return {
       users: []
     }
   },
   methods: {
-    getUsers: () => {
+    getUsers: ()=>{
       axios.post(`http://localhost:4040/api/users`, {
-        users: this.newUser,
+		users: this.newUser,
       })
-        .then(response => {
-        })
-        .catch(e => {
-          console.log(e)
-        })
-    }
-  },
-  created() {
-    axios.get(`http://localhost:4040/api/users`)
       .then(response => {
-        this.users = response.data
       })
       .catch(e => {
         console.log(e)
       })
+    }
+  },
+  created(){
+    axios.get(`http://localhost:4040/api/users`)
+    .then(response => {
+      this.users = response.data
+    })
+    .catch(e => {
+      console.log(e)
+    })
   }
 };
-</script>
+</script> 
 
-      
+<!--<script>
+// mapState is a helper function provided by vuex to simplify the creation of these objects. 
+// The end result is exactly the same, feel free to use whatever is more comfortable.
+import { mapState } from 'vuex';
+export default {
+  name: 'userTable',
+  computed: mapState([
+    'users'
+  ]),
+  // return this.$store.state.projects
+};
+</script>   -->   
 
 
 <style>
 .containe {
   text-align: center;
-  padding: 50px;
-  margin: 50px;
+  padding-top: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: auto; 
 }
-
 .table-title {
   background-color: #303030;
   color: white;
   ;
 }
-
 .tools {
   text-align: right;
   display: block !important;

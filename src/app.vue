@@ -14,10 +14,10 @@ import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 import Bootstrap from 'bootstrap';
 require('bootstrap-sass');
 import Jquery from 'jquery';
-import Vuetify from 'vuetify/dist/vuetify.js';
-import Vuetifycss from 'vuetify/dist/vuetify.min.css';
+//import Vuetify from 'vuetify/dist/vuetify.js';
+//import Vuetifycss from 'vuetify/dist/vuetify.min.css';
 Vue.use(VueRouter);
-Vue.use(Vuetify);
+//Vue.use(Vuetify);
 const routes = [
   {
     path: '/',

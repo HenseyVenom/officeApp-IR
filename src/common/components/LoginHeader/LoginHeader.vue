@@ -1,5 +1,5 @@
 <template>
-  <h1 class="form-signin-heading">{{ caption }}</h1>
+  <h2 class="form-signin-heading">{{ caption }}</h2>
 </template>
 
 <script>
@@ -13,5 +13,6 @@
   .form-signin-heading{
     margin-top: 30px;
     margin-bottom:30px;
+    text-align: center;
   }
 </style>
