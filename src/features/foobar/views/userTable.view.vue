@@ -30,42 +30,6 @@
   </div>
 </template>
 
-
- <script>
-
-import axios from 'axios';
-export default {
-  name: 'userTable',
-  data(){
-    return {
-      users: []
-    }
-  },
-  methods: {
-    getUsers: ()=>{
-      axios.post(`http://localhost:4040/api/users`, {
-		users: this.newUser,
-      })
-      .then(response => {
-      })
-      .catch(e => {
-        console.log(e)
-      })
-    }
-  },
-  created(){
-    axios.get(`http://localhost:4040/api/users`)
-    .then(response => {
-      this.users = response.data
-    })
-    .catch(e => {
-      console.log(e)
-    })
-  }
-};
-
-</script> 
-<!--
 <script>
 // mapState is a helper function provided by vuex to simplify the creation of these objects. 
 // The end result is exactly the same, feel free to use whatever is more comfortable.
@@ -75,17 +39,20 @@ export default {
   computed: mapState([
     'users'
   ]),
-  // return this.$store.state.projects
+  mounted() {
+    this.$store.dispatch('LOAD_USERS_LIST');
+  }
+ 
 };
-</script> -->   
+</script>   
 
 
 <style>
 .containe {
   text-align: center;
   padding-top: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
   overflow: auto; 
 }
 
@@ -102,5 +69,5 @@ export default {
   padding: 10px !important;
   background-color: white;
   color: black;
-}
+} 
 </style>

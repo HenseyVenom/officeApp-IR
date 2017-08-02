@@ -4,6 +4,7 @@
 
 <script>
 import Vue from 'vue';
+import store from './store/store';
 import VueRouter from 'vue-router/dist/vue-router';
 import LoginRoutes from 'features/Login/login.routes';
 import FoobarRoutes from  'features/foobar/foobar.routes';
@@ -13,10 +14,9 @@ import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 import Bootstrap from 'bootstrap';
 require('bootstrap-sass');
 import Jquery from 'jquery';
-//import Vuetify from 'vuetify/dist/vuetify.js';
-//import Vuetifycss from 'vuetify/dist/vuetify.min.css';
+
 Vue.use(VueRouter);
-//Vue.use(Vuetify);
+
 const routes = [
   {
     path: '/',
@@ -34,12 +34,12 @@ const routes = [
   },
   ...LoginRoutes,
   ...FoobarRoutes,
-  //...ToolBarRoutes,
 ];
 const router = new VueRouter({
   routes,
 });
 export default {
+  store,
   router,
 };
 </script>

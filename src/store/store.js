@@ -19,7 +19,7 @@ const store = new Vuex.Store({
   // Actions are where you define the calls that will commit changes to your store.
   actions: {
     LOAD_USERS_LIST({ commit }) {
-      axios.post('http://localhost:4040/api/users').then((response) => {
+      axios.get('http://localhost:4040/api/users').then((response) => {
         commit('SET_USERS_LIST', { list: response.data });
       }, (err) => {
         console.log(err);
@@ -29,7 +29,7 @@ const store = new Vuex.Store({
 
   // The mutations calls are the only place that the store can be updated.
   mutations: {
-    SET_PROJECT_LIST: (state, { list }) => {
+    SET_USERS_LIST(state, { list }) {
       state.users = list;
     },
   },
