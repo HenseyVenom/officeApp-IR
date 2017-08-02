@@ -11,7 +11,7 @@
             <label>Role</label>
             <input-select v-bind:options="options"></input-select>
             <input-checkbox caption="Accepted"></input-checkbox>
-            <input-checkbox caption="Enable" checked></input-checkbox>
+            <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
             <label>Description</label>
             <input-loginpanel></input-loginpanel>
             <label>Phone</label>
@@ -32,6 +32,9 @@ export default {
     name: 'useraddform',
     data: () => {
         return {
+             level: {
+                enable: true,
+      },
             options: [
                 '', 'guest', 'employer', 'employee'
             ],

@@ -6,6 +6,8 @@ import userAdd from './views/UserAddForm.vue';
 import officeTable from './views/officeTable.view.vue';
 import levelTable from './views/levelTable.view.vue';
 import POIsTable from './views/POIsTable.view.vue';
+import beaconTable from './views/beaconTable.view.vue';
+import requestTopicTable from './views/requestTopicTable.view.vue';
 
 
 export default [
@@ -49,6 +51,16 @@ export default [
         name: 'foo.POIsTable',
         path: 'POIsTable',
         component: POIsTable,
+      },
+      {
+        name: 'foo.beaconTable',
+        path: 'beaconTable',
+        component: beaconTable,
+      },
+      {
+        name: 'foo.requestTopicTable',
+        path: 'requestTopicTable',
+        component: requestTopicTable,
       },
     ],
   },

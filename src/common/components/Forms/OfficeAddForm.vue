@@ -8,7 +8,7 @@
       <input-loginpanel></input-loginpanel>
       <label>Location</label>
       <input-loginpanel></input-loginpanel>
-      <input-checkbox caption="Enable" checked></input-checkbox>
+      <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
       <input-addfile content="Image"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
@@ -20,7 +20,13 @@
 <script>
 export default {
   name: 'officeaddform',
-
+    data: () => {
+    return {
+      level: {
+        enable: true,
+      },
+    }
+  }
 }
 </script>
 

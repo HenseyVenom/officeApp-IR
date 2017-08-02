@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="form-control col-md-5">
-      <legend>Add POIs</legend>
+      <legend>Add beacon</legend>
       <label>Name</label>
       <input-loginpanel></input-loginpanel>
       <label>Description</label>
@@ -10,23 +10,19 @@
       <input-select v-bind:options="options2"></input-select>
       <label>Level</label>
       <input-select v-bind:options="options3"></input-select>
-      <label>Beacon</label>
+      <label>POI</label>
       <input-select v-bind:options="options4"></input-select>
-      <label>Location X1</label>
+      <label>Latitude</label>
       <input-loginpanel readonly></input-loginpanel>
-      <label>Location Y1</label>
+      <label>Longitude</label>
       <input-loginpanel readonly></input-loginpanel>
-      <label>Location X2</label>
-      <input-loginpanel aria-readonly="0"></input-loginpanel>
-      <label>Location Y2</label>
-      <input-loginpanel aria-readonly="0"></input-loginpanel>
-      <label>Type</label>
-      <input-select v-bind:options="options5"></input-select>
-      <label>Kind</label>
-      <input-select v-bind:options="options6"></input-select>
+      <label>Minor</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Major</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Uuid</label>
+      <input-loginpanel>A2F03D89-7094-4FF9-924E-E9524F52914B</input-loginpanel>
       <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
-      <label>Device</label>
-      <input-select v-bind:options="options7"></input-select>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
     </form>
@@ -36,10 +32,10 @@
 
 <script>
 export default {
-  name: 'poisaddform',
+  name: 'beaconaddform',
   data: () => {
     return {
-      level: {
+       level: {
         enable: true,
       },
       options2: [
@@ -49,17 +45,8 @@ export default {
         '', 'test level'
       ],
       options4: [
-        '', 'test beacon'
-      ],
-      options5: [
-        '', 'Point', 'Square'
-      ],
-      options6: [
-        '', 'Person', 'Room', 'Area', 'Printer'
-      ],
-      options7: [
-        ''
-      ]      
+        '', 'test Room', 'test Area', 'Test person'
+      ]
     };
   }
 }
