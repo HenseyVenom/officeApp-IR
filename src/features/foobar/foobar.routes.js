@@ -9,7 +9,8 @@ import POIsTable from './views/POIsTable.view.vue';
 import beaconTable from './views/beaconTable.view.vue';
 import requestTopicTable from './views/requestTopicTable.view.vue';
 import domainTable from './views/domainTable.view.vue';
-
+import deviceTable from './views/deviceTable.view.vue';
+import NotificationGroupTable from './views/NotificationGroupTable.view.vue';
 
 export default [
   {
@@ -67,6 +68,16 @@ export default [
         name: 'foo.domainTable',
         path: 'domainTable',
         component: domainTable,
+      },
+      {
+        name: 'foo.deviceTable',
+        path: 'deviceTable',
+        component: deviceTable,
+      },
+      {
+        name: 'foo.NotificationGroupTable',
+        path: 'NotificationGroupTable',
+        component: NotificationGroupTable,
       },
     ],
   },
