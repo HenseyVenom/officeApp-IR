@@ -1,0 +1,37 @@
+<template>
+  <div class="containe2">
+    <form class="form-control bord">
+      <legend>Add office</legend>
+      <label>Name</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Description</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Location</label>
+      <input-loginpanel></input-loginpanel>
+      <input-checkbox caption="Enable" checked></input-checkbox>
+      <input-addfile content="Image"></input-addfile>
+      <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
+      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+    </form>
+  </div>
+</template>
+
+
+<script>
+export default {
+  name: 'officesaddform',
+}
+</script>
+
+<style>
+.containe2{
+    padding: 10px;
+    margin-top: 50px;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+.bord{
+  border: 1px dashed #FF3300 !important;
+
+}
+</style>

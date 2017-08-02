@@ -1,84 +1,164 @@
-// dashboard.routes.js
+// file dashboard.routes.js
 
-// Dashboard view
+// Dashboard main view
 import DashboardView from './dashboard.view.vue';
 
-// Routes to subpages views
-import BeaconsRoutes from './Beacons/beacons.routes';
-import CompaniesSwitchRoutes from './CompaniesSwitch/companiesswitch.routes';
-import DevicesRoutes from './Devices/devices.routes';
-import DomainsRoutes from './Domains/domains.routes';
-import LevelsRoutes from './Levels/levels.routes';
-import NotificationGroupRoutes from './NotificationGroup/notificationgroup.routes';
-import OfficesRoutes from './Offices/offices.routes';
-import POIsRoutes from './POIs/pois.routes';
-import RequestsRoutes from './Requests/requests.routes';
-import RequestsTopicsRoutes from './RequestsTopics/requeststopics.routes';
-import UsersRoutes from './Users/users.routes';
+// Users views
+import UsersListView from './Users/views/UsersList.view.vue';
+import UsersAddFormView from './Users/views/UsersAddForm.view.vue';
 
+// Beacons eacons views
+import BeaconsListView from './Beacons/views/BeaconsList.view.vue';
+import BeaconsAddFormView from './Beacons/views/BeaconsAddForm.view.vue';
+
+// Companies switch view
+import CompaniesListView from './CompaniesSwitch/view/CompaniesList.view.vue';
+
+// Devices views
+import DevicesListView from './Devices/views/DevicesList.view.vue';
+import DevicesAddFormView from './Devices/views/DevicesAddForm.view.vue';
+
+// Domains views
+import DomainsListView from './Domains/views/DomainsList.view.vue';
+import DomainsAddFormView from './Domains/views/DomainsAddForm.view.vue';
+
+// Levels views
+import LevelsListView from './Levels/views/LevelsList.view.vue';
+import LevelsAddFormView from './Levels/views/LevelsAddForm.view.vue';
+
+// Notification group views
+import NotificationGroupListView from './NotificationGroup/views/NotificationGroupList.view.vue';
+import NotificationGroupAddFormView from './NotificationGroup/views/NotificationGroupAddForm.view.vue';
+
+// Offices views
+import OfficesListView from './Offices/views/OfficesList.view.vue';
+import OfficesAddFormView from './Offices/views/OfficesAddForm.view.vue';
+
+// Pois views
+import POIsListView from './POIs/views/POIsList.view.vue';
+import POIsAddFormView from './POIs/views/POIsAddForm.view.vue';
+
+// Requests views
+import RequestsListView from './Requests/views/RequestsList.view.vue';
+import RequestsAddFormView from './Requests/views/RequestsAddForm.view.vue';
+
+// Requests topics views
+import RequestsTopicsListView from './RequestsTopics/views/RequestsTopicsList.view.vue';
+import RequestsTopicsAddFormView from './RequestsTopics/views/RequestsTopicsAddForm.view.vue';
+
+// Routes tree
 export default [
   {
     path: '/dashboard',
     name: 'dashboard',
     component: DashboardView,
-    redirect: '/dashboard',
+    redirect: '/dashboard/userslist',
     children: [
       {
         name: 'dashboard.userslist',
         path: 'userslist',
-        component: UsersRoutes,
+        component: UsersListView,
+      },
+      {
+        name: 'dashboard.useraddform',
+        path: 'useraddform',
+        component: UsersAddFormView,
       },
       {
         name: 'dashboard.beaconslist',
-        path: 'beaconlist',
-        component: BeaconsRoutes,
+        path: 'beaconsaddform',
+        component: BeaconsListView,
       },
       {
-        name: 'dashboard.companiesswitchlist',
-        path: 'companiesswitchlist',
-        component: CompaniesSwitchRoutes,
+        name: 'dashboard.beaconsaddform',
+        path: 'beaconsaddform',
+        component: BeaconsAddFormView,
+      },
+      {
+        name: 'dashboard.companieslist',
+        path: 'companieslist',
+        component: CompaniesListView,
       },
       {
         name: 'dashboard.deviceslist',
         path: 'deviceslist',
-        component: DevicesRoutes,
+        component: DevicesListView,
+      },
+      {
+        name: 'dashboard.devicesaddform',
+        path: 'devicesaddform',
+        component: DevicesAddFormView,
       },
       {
         name: 'dashboard.domainslist',
         path: 'domainslist',
-        component: DomainsRoutes,
+        component: DomainsListView,
+      },
+      {
+        name: 'dashboard.domainsaddform',
+        path: 'domainsaddform',
+        component: DomainsAddFormView,
       },
       {
         name: 'dashboard.levelslist',
         path: 'levelslist',
-        component: LevelsRoutes,
+        component: LevelsListView,
+      },
+      {
+        name: 'dashboard.levelsaddform',
+        path: 'levelsaddform',
+        component: LevelsAddFormView,
       },
       {
         name: 'dashboard.notificationgrouplist',
         path: 'notificationgrouplist',
-        component: NotificationGroupRoutes,
+        component: NotificationGroupListView,
+      },
+      {
+        name: 'dashboard.notificationgroupaddform',
+        path: 'notificationgroupaddform',
+        component: NotificationGroupAddFormView,
       },
       {
         name: 'dashboard.officeslist',
         path: 'officeslist',
-        component: OfficesRoutes,
+        component: OfficesListView,
+      },
+      {
+        name: 'dashboard.officesaddform',
+        path: 'officesaddform',
+        component: OfficesAddFormView,
       },
       {
         name: 'dashboard.poislist',
         path: 'poislist',
-        component: POIsRoutes,
+        component: POIsListView,
+      },
+      {
+        name: 'dashboard.poisaddform',
+        path: 'poisaddform',
+        component: POIsAddFormView,
       },
       {
         name: 'dashboard.requestslist',
         path: 'requestslist',
-        component: RequestsRoutes,
+        component: RequestsListView,
+      },
+      {
+        name: 'dashboard.requestsaddform',
+        path: 'requestsaddform',
+        component: RequestsAddFormView,
       },
       {
         name: 'dashboard.requeststopicslist',
         path: 'requeststopicslist',
-        component: RequestsTopicsRoutes,
+        component: RequestsTopicsListView,
+      },
+      {
+        name: 'dashboard.requeststopicsaddform',
+        path: 'requeststopicsaddform',
+        component: RequestsTopicsAddFormView,
       },
     ],
   },
 ];
-

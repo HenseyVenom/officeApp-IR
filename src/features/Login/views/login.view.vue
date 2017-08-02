@@ -33,7 +33,7 @@
         window.console.log(`Logging in with login ${this.userLogin} and password ${this.userPassword}`);
         // example of usage of programmatic route change
         // all components have access to this.$router
-        this.$router.push('/foo');
+        this.$router.push('/dashboard');
       },
     },
   };
@@ -53,12 +53,12 @@
     -webkit-box-shadow: 0px 0px 110px -3px rgba(0,0,0,0.64);
     -moz-box-shadow: 0px 0px 110px -3px rgba(0,0,0,0.64);
     box-shadow: 0px 0px 110px -3px rgba(0,0,0,0.64);
-
-    .form-signin-heading,
+  }
+    .form-signin-heading
     .checkbox {
       margin-bottom: 30px;
     }
-
+    
     .checkbox {
       font-weight: normal;
     }
@@ -71,15 +71,15 @@
     }
 
     input[type="text"] {
-      margin-bottom: 100px;
+      margin-bottom: 10px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
 
     input[type="password"] {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
-  }
-</style>
+  
+</style> 
