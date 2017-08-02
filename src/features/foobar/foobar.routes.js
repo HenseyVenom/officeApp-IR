@@ -8,6 +8,7 @@ import levelTable from './views/levelTable.view.vue';
 import POIsTable from './views/POIsTable.view.vue';
 import beaconTable from './views/beaconTable.view.vue';
 import requestTopicTable from './views/requestTopicTable.view.vue';
+import domainTable from './views/domainTable.view.vue';
 
 
 export default [
@@ -61,6 +62,11 @@ export default [
         name: 'foo.requestTopicTable',
         path: 'requestTopicTable',
         component: requestTopicTable,
+      },
+      {
+        name: 'foo.domainTable',
+        path: 'domainTable',
+        component: domainTable,
       },
     ],
   },

@@ -18,6 +18,7 @@ import LevelAddForm from './Forms/LevelAddForm.vue';
 import POIsAddForm from './Forms/POIsAddForm.vue';
 import BeaconAddForm from './Forms/BeaconAddForm.vue';
 import RequestTopicAddForm from './Forms/RequestTopicAddForm.vue';
+import DomainAddForm from './Forms/DomainAddForm.vue';
 
 
 Vue.component(ButtonCustom.name, ButtonCustom);
@@ -38,3 +39,4 @@ Vue.component(LevelAddForm.name, LevelAddForm);
 Vue.component(POIsAddForm.name, POIsAddForm);
 Vue.component(BeaconAddForm.name, BeaconAddForm);
 Vue.component(RequestTopicAddForm.name, RequestTopicAddForm);
+Vue.component(DomainAddForm.name, DomainAddForm);

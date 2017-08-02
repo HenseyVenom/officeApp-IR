@@ -8,7 +8,7 @@
     <router-link to="/foo/beaconTable"><btn-navitem type="submit" caption="Beacons"></btn-navitem></router-link>
     <router-link to="/foo/alpha"><btn-navitem type="submit" caption="Requests"></btn-navitem></router-link>
     <router-link to="/foo/requestTopicTable"><btn-navitem type="submit" caption="Requests topics"></btn-navitem></router-link>
-    <router-link to="/foo/alpha"><btn-navitem type="submit" caption="Domains"></btn-navitem></router-link>
+    <router-link to="/foo/domainTable"><btn-navitem type="submit" caption="Domains"></btn-navitem></router-link>
     <router-link to="/foo/bravo"><btn-navitem type="submit" caption="Devices"></btn-navitem></router-link>
     <router-link to="/foo/alpha"><btn-navitem type="submit" caption="Notification group"></btn-navitem></router-link>
   </nav> 
