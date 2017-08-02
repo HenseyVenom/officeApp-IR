@@ -5,6 +5,7 @@ import userTable from './views/userTable.view.vue';
 import userAdd from './views/UserAddForm.vue';
 import officeTable from './views/officeTable.view.vue';
 import levelTable from './views/levelTable.view.vue';
+import POIsTable from './views/POIsTable.view.vue';
 
 
 export default [
@@ -43,6 +44,11 @@ export default [
         name: 'foo.levelTable',
         path: 'levelTable',
         component: levelTable,
+      },
+      {
+        name: 'foo.POIsTable',
+        path: 'POIsTable',
+        component: POIsTable,
       },
     ],
   },

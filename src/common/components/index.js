@@ -15,6 +15,7 @@ import InputAddFile from './Inputs/InputAddFile.vue';
 import UserAddForm from './Forms/UserAddForm.vue';
 import OfficeAddForm from './Forms/OfficeAddForm.vue';
 import LevelAddForm from './Forms/LevelAddForm.vue';
+import POIsAddForm from './Forms/POIsAddForm.vue';
 
 
 Vue.component(ButtonCustom.name, ButtonCustom);
@@ -32,4 +33,5 @@ Vue.component(InputAddFile.name, InputAddFile);
 Vue.component(UserAddForm.name, UserAddForm);
 Vue.component(OfficeAddForm.name, OfficeAddForm);
 Vue.component(LevelAddForm.name, LevelAddForm);
+Vue.component(POIsAddForm.name, POIsAddForm);
 

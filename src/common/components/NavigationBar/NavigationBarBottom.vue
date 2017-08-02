@@ -4,7 +4,7 @@
     <router-link to="/foo/userTable"><btn-navitem type="submit" caption="Users"></btn-navitem></router-link>
     <router-link to="/foo/officeTable"><btn-navitem type="submit" caption="Offices"></btn-navitem></router-link>
     <router-link to="/foo/levelTable"><btn-navitem type="submit" caption="Levels"></btn-navitem></router-link>
-    <router-link to="/foo/alpha"><btn-navitem type="submit" caption="POIs"></btn-navitem></router-link>
+    <router-link to="/foo/POIsTable"><btn-navitem type="submit" caption="POIs"></btn-navitem></router-link>
     <router-link to="/foo/bravo"><btn-navitem type="submit" caption="Beacons"></btn-navitem></router-link>
     <router-link to="/foo/alpha"><btn-navitem type="submit" caption="Requests"></btn-navitem></router-link>
     <router-link to="/foo/bravo"><btn-navitem type="submit" caption="Requests topics"></btn-navitem></router-link>
