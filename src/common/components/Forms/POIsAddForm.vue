@@ -3,9 +3,9 @@
     <form class="form-control col-md-5">
       <legend>Add POIs</legend>
       <label>Name</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Description</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Office</label>
       <input-select v-bind:options="options2"></input-select>
       <label>Level</label>
@@ -13,13 +13,13 @@
       <label>Beacon</label>
       <input-select v-bind:options="options4"></input-select>
       <label>Location X1</label>
-      <input-loginpanel readonly></input-loginpanel>
+      <input-panel readonly></input-panel>
       <label>Location Y1</label>
-      <input-loginpanel readonly></input-loginpanel>
+      <input-panel readonly></input-panel>
       <label>Location X2</label>
-      <input-loginpanel aria-readonly="0"></input-loginpanel>
+      <input-panel aria-readonly="0"></input-panel>
       <label>Location Y2</label>
-      <input-loginpanel aria-readonly="0"></input-loginpanel>
+      <input-panel aria-readonly="0"></input-panel>
       <label>Type</label>
       <input-select v-bind:options="options5"></input-select>
       <label>Kind</label>

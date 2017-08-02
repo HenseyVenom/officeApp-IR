@@ -3,13 +3,13 @@
     <form class="form-control col-md-5">
       <legend>Add topic</legend>
       <label>Name (english)</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Name (polski)</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Name (français)</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Name (svenska)</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <input-checkbox caption="Enable"  v-model="level.enable"></input-checkbox>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>

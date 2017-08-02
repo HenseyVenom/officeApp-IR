@@ -3,11 +3,11 @@
     <form class="form-control col-md-5">
       <legend>Add office</legend>
       <label>Name</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Description</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Location</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
       <input-addfile content="Image"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>

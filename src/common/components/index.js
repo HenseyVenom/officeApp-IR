@@ -3,7 +3,7 @@ import Vue from 'vue';
 import ButtonCustom from './Buttons/ButtonCustom.vue';
 import ButtonLogOut from './Buttons/ButtonLogOut.vue';
 import ButtonSwitchCompany from './Buttons/ButtonSwitchCompany.vue';
-import InputLoginPanel from './Inputs/InputLoginPanel.vue';
+import InputPanel from './Inputs/InputPanel.vue';
 import InputSearch from './Inputs/InputSearch.vue';
 import LoginHeader from './LoginHeader/LoginHeader.vue';
 import NavigationBarTop from './NavigationBar/NavigationBarTop.vue';
@@ -24,7 +24,7 @@ import NotificationGroupForm from './Forms/NotificationGroupForm.vue';
 
 
 Vue.component(ButtonCustom.name, ButtonCustom);
-Vue.component(InputLoginPanel.name, InputLoginPanel);
+Vue.component(InputPanel.name, InputPanel);
 Vue.component(InputSearch.name, InputSearch);
 Vue.component(LoginHeader.name, LoginHeader);
 Vue.component(ButtonLogOut.name, ButtonLogOut);

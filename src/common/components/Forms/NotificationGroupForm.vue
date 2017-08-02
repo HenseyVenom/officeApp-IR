@@ -3,7 +3,7 @@
     <form class="form-control col-md-5">
       <legend>Add group</legend>
       <label>Name</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <input-search type="search" name="search" placeholder="Search" class="offset-md-7"></input-search>
       <br/>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
