@@ -1,5 +1,5 @@
 <template>
-  <div> 
+  <div>
     <form class="form-control col-md-5">
       <legend>Add POIs</legend>
       <label>Name</label>
@@ -42,7 +42,7 @@ export default {
       options2: [
         '', 'test office1', 'test office2'
       ],
-       options3: [
+      options3: [
         '', 'test level'
       ],
       options4: [
