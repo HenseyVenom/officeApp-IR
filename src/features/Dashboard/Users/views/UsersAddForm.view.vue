@@ -1,27 +1,26 @@
 <template>
   <div class="containe2"> 
     <form class="form-control bord">
-      <legend>Add user</legend>
-      <label>Name</label>
-      <input-loginpanel></input-loginpanel>
-      <label>Surname</label>
-      <input-loginpanel></input-loginpanel>
-      <label>E-mail</label>
-      <input-loginpanel></input-loginpanel>
-      <label>Role</label>
-      <input-select v-bind:options="options"></input-select>
-      <input-checkbox caption="Accepted"></input-checkbox>
-      <input-checkbox caption="Enable" checked></input-checkbox>
-      <label>Description</label>
-      <input-loginpanel></input-loginpanel>
-      <label>Phone</label>
-      <input-loginpanel></input-loginpanel>
-      <label>Position</label>
-      <input-loginpanel></input-loginpanel>
-      <label>Office</label>
-      <input-select v-bind:options="options2"></input-select>
-      <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+     <label>Name</label>
+            <input-panel></input-panel>
+            <label>Surname</label>
+            <input-panel></input-panel>
+            <label>E-mail</label>
+            <input-panel></input-panel>
+            <label>Role</label>
+            <input-select v-bind:options="options"></input-select>
+            <input-checkbox caption="Accepted"></input-checkbox>
+            <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
+            <label>Description</label>
+            <input-panel></input-panel>
+            <label>Phone</label>
+            <input-panel></input-panel>
+            <label>Position</label>
+            <input-panel></input-panel>
+            <label>Office</label>
+            <input-select v-bind:options="options2"></input-select>
+            <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
+            <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
     </form>
   </div>
 </template>
@@ -29,19 +28,23 @@
 
 <script>
 export default {
-  name: 'useraddform',
-  data: () => {
-    return {
-      options: [
-        '', 'guest', 'employer', 'employee'
-      ],
-      options2: [
-        '', 'test office1', 'test office2'
-      ]
-    };
-  }
+    name: 'useraddform',
+    data: () => {
+        return {
+             level: {
+                enable: true,
+      },
+            options: [
+                '', 'guest', 'employer', 'employee'
+            ],
+            options2: [
+                '', 'test office1', 'test office2'
+            ]
+        };
+    }
 }
 </script>
+
 <style>
 .containe2{
     padding: 10px;

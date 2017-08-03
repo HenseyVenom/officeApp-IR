@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: 'input-loginpanel',
+    name: 'input-panel',
     data: () => ({
       internalModel: '',
     }),

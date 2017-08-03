@@ -1,14 +1,14 @@
 <template>
-  <div class="containe2">
+  <div class="containe2"> 
     <form class="form-control bord">
       <legend>Add office</legend>
       <label>Name</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Description</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Location</label>
-      <input-loginpanel></input-loginpanel>
-      <input-checkbox caption="Enable" checked></input-checkbox>
+      <input-panel></input-panel>
+      <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
       <input-addfile content="Image"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
@@ -20,6 +20,13 @@
 <script>
 export default {
   name: 'officesaddform',
+    data: () => {
+    return {
+      level: {
+        enable: true,
+      },
+    }
+  }
 }
 </script>
 

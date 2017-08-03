@@ -1,16 +1,16 @@
 <template>
-  <div class="containe2">
+  <div class="containe2"> 
     <form class="form-control bord">
       <legend>Add level</legend>
       <label>Name</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Description</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Office</label>
       <input-select v-bind:options="options"></input-select>
       <label>Sort Order</label>
-      <input-loginpanel></input-loginpanel>
-      <input-checkbox caption="Enable" checked></input-checkbox>
+      <input-panel></input-panel>
+      <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
       <input-addfile content="Base Map"></input-addfile>
       <input-addfile content="Detail Item Map"></input-addfile>
       <input-addfile content="Area Map"></input-addfile>
@@ -24,9 +24,12 @@
 
 <script>
 export default {
-  name: 'levelsaddform',
+  name: 'leveladdform',
   data: () => {
     return {
+      level: {
+        enable: true,
+      },
       options: [
         '', 'Test office1', 'Test office2'
       ]

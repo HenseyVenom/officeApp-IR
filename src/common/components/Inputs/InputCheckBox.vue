@@ -1,17 +1,18 @@
-<template>
-    <div id="test" class="form-check">
-        <input type="checkbox" id="checkbox" value="">
+ <template>
+    <div id="test" class="form-check"> 
+        <input type="checkbox" id="checkbox"  :checked="value" @change="change(!value)">
         <label for="checkbox">{{ caption }}</label>
     </div>
 </template>
 
   <script>
 export default {
-    props: ['caption'],
+    props: ['caption', 'value'],
     name: 'input-checkbox',
     methods: {
-        change() {
-            this.$emit('change', this.internalModel);
+        change(value) {
+            console.log(value)
+            this.$emit('input', value);
         },
     },
 };
