@@ -34,6 +34,7 @@
         // example of usage of programmatic route change
         // all components have access to this.$router
         this.$router.push('/dashboard');
+        location.reload();
       },
     },
   };

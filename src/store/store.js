@@ -25,12 +25,23 @@ const store = new Vuex.Store({
         console.log(err);
       });
     },
+    ADD_NEW_USER({ commit }, user) {
+      commit('SET_NEW_USER', user);
+      axios.post('http://localhost:4040/api/users', user).then((response) => {
+        console.log(response);
+      }, (err) => {
+        console.log(err);
+      });
+    },
   },
 
   // The mutations calls are the only place that the store can be updated.
   mutations: {
     SET_USERS_LIST(state, { list }) {
       state.users = list;
+    },
+    SET_NEW_USER(state, list) {
+      state.users.push(list);
     },
   },
 

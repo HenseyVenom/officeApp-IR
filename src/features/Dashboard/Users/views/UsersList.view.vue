@@ -1,9 +1,9 @@
 <template>
-  <div class="containe">
+    <div class="containe">
     <router-link to="/dashboard/useraddform" class="tools">
       <img src="assets/add.png" />
     </router-link>
-    <table class="table table-hover">
+    <table id ="userTable" class="table table-hover">
       <thead class="table-title">
         <tr>
           <th>Id</th>
@@ -15,7 +15,7 @@
           <th>White</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="searchable">
         <tr v-for="user in users" v-bind:key="user.id">
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
@@ -26,7 +26,7 @@
           <td>{{user.white}}</td>
         </tr>
       </tbody>
-    </table>
+    </table> 
   </div>
 </template>
 
@@ -41,9 +41,8 @@ export default {
   ]),
   mounted() {
     this.$store.dispatch('LOAD_USERS_LIST');
-  }
- 
-};
+  },
+}
 </script>   
 
 
