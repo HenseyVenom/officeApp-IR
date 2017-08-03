@@ -3,7 +3,8 @@
   <nav class="navbar navbar-top">
     <input-search type="search" name="search" placeholder="Search" required="" autofocus="" /> 
     <router-link to="/login"><button-switch-company type="submit" caption="Switch Company"></button-switch-company></router-link>
-    <router-link to="/login"><button-logout type="submit" caption="Log out"></button-logout></router-link>
+    <!--<router-link ><button-logout type="submit" caption="Log out" v-if="isLoggedIn" @click="logout"></button-logout></router-link>-->
+    <a href="#" v-if="isLoggedIn" @click="logout"><button-logout type="submit" caption="Log out"></button-logout></a> 
   </nav>
 
 
@@ -29,6 +30,17 @@
 <script>
   export default {
     name: 'navigation-bar-top', 
+    methods:{
+      logout() {
+        this.$store.dispatch('LOG_OUT');
+      }
+    },
+    computed: {
+      isLoggedIn() {
+        return this.$store.getters.isLoggedIn;
+      }
+  }
+
   };
 </script>
 
