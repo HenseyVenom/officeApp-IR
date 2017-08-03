@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import ButtonSignIn from './Buttons/ButtonSignIn.vue';
+import ButtonCustom from './Buttons/ButtonCustom.vue';
 import ButtonLogOut from './Buttons/ButtonLogOut.vue';
 import ButtonSwitchCompany from './Buttons/ButtonSwitchCompany.vue';
 import InputPanel from './Inputs/InputPanel.vue';
@@ -16,7 +16,7 @@ import InputAddFile from './Inputs/InputAddFile.vue';
 // import UserAddForm from '.UserAddForm/UserAddForm.vue';
 // tralalal
 
-Vue.component(ButtonSignIn.name, ButtonSignIn);
+Vue.component(ButtonCustom.name, ButtonCustom);
 Vue.component(InputPanel.name, InputPanel);
 Vue.component(InputSearch.name, InputSearch);
 Vue.component(LoginHeader.name, LoginHeader);
