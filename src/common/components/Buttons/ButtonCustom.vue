@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-lg btn-block btn-hut " v-on:click="click"> {{ caption }} </button>
+  <button class="btn btn-hut" v-on:click="click"> {{ caption }} </button>
 </template>
 
 <script>
@@ -19,6 +19,7 @@
   color: #FFFFFF; 
   background-color: #FF3300; 
   border-color: #FFFFFF; 
+  margin-top: 20px;
 } 
  
 .btn-hut:hover, 
