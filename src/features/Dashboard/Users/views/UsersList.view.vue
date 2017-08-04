@@ -1,9 +1,9 @@
 <template>
-  <div class="containe">
+    <div class="containe">
     <router-link to="/dashboard/useraddform" class="tools">
       <img src="assets/add.png" />
     </router-link>
-    <table class="table table-hover">
+    <table id ="userTable" class="table table-hover">
       <thead class="table-title">
         <tr>
           <th>Id</th>
@@ -13,9 +13,10 @@
           <th>Role</th>
           <th>Accepted</th>
           <th>White</th>
+          <th></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="searchable">
         <tr v-for="user in users" v-bind:key="user.id">
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
@@ -24,9 +25,10 @@
           <td>{{user.role}}</td>
           <td>{{user.accepted}}</td>
           <td>{{user.white}}</td>
+          <td><button v-on:click="deleteUser(user)">X</button></td>
         </tr>
       </tbody>
-    </table>
+    </table> 
   </div>
 </template>
 
@@ -41,10 +43,14 @@ export default {
   ]),
   mounted() {
     this.$store.dispatch('LOAD_USERS_LIST');
+  },
+  methods: {
+    deleteUser (user) {
+      this.users.splice(this.users.indexOf(user),1);
+    }
   }
- 
-};
-</script>   
+}
+</script>   y
 
 
 <style>

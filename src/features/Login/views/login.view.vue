@@ -3,12 +3,14 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="wrapper">
-          <form class="form-signin">
-            <login-header caption="Sign in to your admin account" />
-            <input-panel type="text" name="email" placeholder="Email Address" required="" autofocus="" v-on:change="(e) => this.userLogin = e"></input-panel>
-            <input-panel type="password" name="password" placeholder="Password" required="" autofocus="" v-on:change="(e) => this.userPassword = e"></input-panel>
-            <input-checkbox caption="Remember me"></input-checkbox>
-            <buttonhut class="btn-lg btn-block" caption="Sign In" type="submit" v-on:click="login" />
+          <form class="form-signin"  @submit.prevent="login({ userEmail, userPassword })">    
+            <login-header caption="Sign in to your admin account"/>   
+            <input-panel type="text" name="userEmail" placeholder="Email Address" required="" autofocus=""  v-model="userEmail"/>
+            <input-panel type="password" name="userPassword" placeholder="Password" required="" autofocus="" v-model="userPassword"/>    
+            <label class="checkbox">
+              <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label> 
+            <buttonhut caption="Sign In" type="submit"/>  
           </form>
         </div>
       </div>
@@ -20,20 +22,32 @@
   export default {
     name: 'login-view',
     data: () => ({
-      userLogin: '',
+      userEmail: '',
       userPassword: '',
     }),
-    components: {
-
-    },
     methods: {
       login() {
+        this.$store.dispatch("LOG_IN", {
+          userEmail: this.userEmail,
+          userPassword: this.userPassword
+        }).then(() => {
+          this.$router.push("/dashboard");
+          location.reload();
+      });
+      }
+      /*login() {
         window.console.log(`Logging in with login ${this.userLogin} and password ${this.userPassword}`);
         // example of usage of programmatic route change
         // all components have access to this.$router
         this.$router.push('/dashboard');
-      },
+        location.reload();
+      },*/
     },
+    computed: {
+      isLoggedIn() {
+        return this.$store.getters.isLoggedIn;
+      }
+  }
   };
 </script>
 
