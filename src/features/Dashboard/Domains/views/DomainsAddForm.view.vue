@@ -15,11 +15,7 @@
 
 <script>
 export default {
-<<<<<<< HEAD
-  name: 'domainaddform',
-=======
   name: 'domainsaddform',
->>>>>>> robert
   data: () => {
     return {
       level: {
