@@ -24,6 +24,7 @@ export default {
     border-color: #FF3300 !important;
     outline: none;
 }
+
 .form-border {
     margin-bottom: 10px;
 }

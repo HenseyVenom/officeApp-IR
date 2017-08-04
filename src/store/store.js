@@ -6,9 +6,9 @@ import axios from 'axios';
 
 Vue.use(Vuex);
 
-const LOGIN = 'LOGIN';
-const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-const LOGOUT = 'LOGOUT';
+// const LOGIN = 'LOGIN';
+// const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+// const LOGOUT = 'LOGOUT';
 
 // Create the Vuex instance by combining the state actions mutations getters and modules objects
 // Then export the Vuex store for use by components in our awesome Vue application
@@ -34,33 +34,34 @@ const store = new Vuex.Store({
     },
     ADD_NEW_USER({ commit }, user) {
       commit('SET_NEW_USER', user);
-      axios.post('http://localhost:4040/api/users', user).then((response) => {
-        console.log(response);
+      return axios.post('http://localhost:4040/api/users', user).then(() => {
       }, (err) => {
         console.log(err);
       });
     },
     DELETE_USER({ commit }, user) {
-      commit('DELETE_ACCOUNT', user);
-      axios.delete('http://localhost:4040/api/users', user).then((response) => {
-        console.log(response);
+      commit('DELETE_ACCOUNT', user.id);
+      console.log('to jest id :', user.id);
+      axios.delete('http://localhost:4040/api/users', { id: user.id }).then(() => {
+        console.log('sdfsadf');
       }, (err) => {
         console.log(err);
+        console.log(user.id);
       });
     },
-    LOG_IN({ commit }, creds) {
-      commit(LOGIN);
+    LOG_IN({ commit }) {
+      commit('LOGIN');
       return new Promise((resolve) => {
         setTimeout(() => {
           localStorage.setItem('token', 'JWT');
-          commit(LOGIN_SUCCESS);
+          commit('LOGIN_SUCCESS');
           resolve();
         }, 1);
       });
     },
     LOG_OUT({ commit }) {
       localStorage.removeItem('token');
-      commit(LOGOUT);
+      commit('LOGOUT');
     },
   },
 
@@ -73,16 +74,18 @@ const store = new Vuex.Store({
       state.users.push(list);
     },
     DELETE_ACCOUNT(state, account) {
-      state.users.$remove(account);
+      console.log(account);
+      const i = state.users.map(user => user.id).indexOf(account);
+      state.users.splice(i, 1);
     },
-    [LOGIN](state) {
+    LOGIN(state) {
       state.pending = true;
     },
-    [LOGIN_SUCCESS](state) {
+    LOGIN_SUCCESS(state) {
       state.isLoggedIn = true;
       state.pending = false;
     },
-    [LOGOUT](state) {
+    LOGOUT(state) {
       state.isLoggedIn = false;
     },
 
