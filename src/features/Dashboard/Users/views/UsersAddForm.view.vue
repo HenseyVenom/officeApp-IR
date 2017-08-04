@@ -1,47 +1,53 @@
 <template>
   <div class="containe2"> 
     <form class="form-control bord">
-     <label>Name</label>
-            <input-panel></input-panel>
-            <label>Surname</label>
-            <input-panel></input-panel>
-            <label>E-mail</label>
-            <input-panel></input-panel>
-            <label>Role</label>
-            <input-select v-bind:options="options"></input-select>
-            <input-checkbox caption="Accepted"></input-checkbox>
-            <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
-            <label>Description</label>
-            <input-panel></input-panel>
-            <label>Phone</label>
-            <input-panel></input-panel>
-            <label>Position</label>
-            <input-panel></input-panel>
-            <label>Office</label>
-            <input-select v-bind:options="options2"></input-select>
-            <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-            <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+      <legend>Add user</legend>
+      <label>Name</label>
+      <input-loginpanel id="name" v-on:change="(e) => this.user.name = e"></input-loginpanel>
+      <label>Surname</label>
+      <input-loginpanel id="surname" v-on:change="(e) => this.user.surname = e"></input-loginpanel>
+      <label>E-mail</label>
+      <input-loginpanel id="email" v-on:change="(e) => this.user.email = e"></input-loginpanel>
+      <label>Role</label>
+      <input-select id="role" v-bind:options="options"></input-select>
+      <input-checkbox caption="Accepted"></input-checkbox>
+      <input-checkbox caption="Enable" checked></input-checkbox>
+      <label>Description</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Phone</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Position</label>
+      <input-loginpanel></input-loginpanel>
+      <label>Office</label>
+      <input-select v-bind:options="options2"></input-select>
+      <buttonhut class="btn btn-sm btn-success" caption="Save" @click="addUser"></buttonhut>
+      <buttonhut class="btn btn-sm" caption="Cancel" @click="cancel"></buttonhut>
     </form>
   </div>
 </template>
 
-
 <script>
 export default {
-    name: 'useraddform',
-    data: () => {
-        return {
-             level: {
-                enable: true,
-      },
-            options: [
-                '', 'guest', 'employer', 'employee'
-            ],
-            options2: [
-                '', 'test office1', 'test office2'
-            ]
-        };
+  name: 'usersaddform',
+  data: () => {
+    return {
+      options: [
+        '', 'guest', 'employer', 'employee'
+      ],
+      options2: [
+        '', 'test office1', 'test office2'
+      ],
+      user: {},
+    };
+  },
+  methods: {
+    addUser () {
+      this.$store.dispatch('ADD_NEW_USER',this.user)
+    },
+    cancel () {
+      this.$router.push('/dashboard/userslist');
     }
+  }
 }
 </script>
 

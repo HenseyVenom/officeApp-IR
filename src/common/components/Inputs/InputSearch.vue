@@ -1,19 +1,23 @@
 <template>
-  <input type="text" class="form-box form-control" v-model="internalModel" v-on:input="change" />
+  <input id="filter" type="text" class="form-box form-control" placeholder="Type here...">
 </template>
 
 <script>
   export default {
     name: 'input-search',
-    data: () => ({
-      internalModel: '',
-    }),
-    methods: {
-      change() {
-        this.$emit('change', this.internalModel);
-      },
-    },
-  };
+  }
+  $(document).ready(function () {
+    (function ($) {
+        $('#filter').keyup(function () {
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+        })
+    }(jQuery));
+});
+
 </script>
 
 <style>
