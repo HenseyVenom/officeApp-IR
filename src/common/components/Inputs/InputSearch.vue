@@ -1,5 +1,5 @@
 <template>
-  <input class="form-box form-control" v-model="internalModel" v-on:input="change" />
+  <input type="text" class="form-box form-control" v-model="internalModel" v-on:input="change" />
 </template>
 
 <script>

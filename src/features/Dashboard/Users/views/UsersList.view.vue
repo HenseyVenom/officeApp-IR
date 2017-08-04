@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="user in users" v-bind:key="user.id">
+        <tr v-for="user in users" :key="user.id">
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
           <td>{{user.surname}}</td>
