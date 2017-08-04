@@ -3,21 +3,21 @@
     <form class="form-control bord">
       <legend>Add user</legend>
       <label>Name</label>
-      <input-loginpanel id="name" v-on:change="(e) => this.user.name = e"></input-loginpanel>
+      <input-panel id="name" v-on:change="(e) => this.user.name = e"></input-panel>
       <label>Surname</label>
-      <input-loginpanel id="surname" v-on:change="(e) => this.user.surname = e"></input-loginpanel>
+      <input-panel id="surname" v-on:change="(e) => this.user.surname = e"></input-panel>
       <label>E-mail</label>
-      <input-loginpanel id="email" v-on:change="(e) => this.user.email = e"></input-loginpanel>
+      <input-panel id="email" v-on:change="(e) => this.user.email = e"></input-panel>
       <label>Role</label>
       <input-select id="role" v-bind:options="options"></input-select>
       <input-checkbox caption="Accepted"></input-checkbox>
       <input-checkbox caption="Enable" checked></input-checkbox>
       <label>Description</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Phone</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Position</label>
-      <input-loginpanel></input-loginpanel>
+      <input-panel></input-panel>
       <label>Office</label>
       <input-select v-bind:options="options2"></input-select>
       <buttonhut class="btn btn-sm btn-success" caption="Save" @click="addUser"></buttonhut>
@@ -43,6 +43,9 @@ export default {
   methods: {
     addUser () {
       this.$store.dispatch('ADD_NEW_USER',this.user)
+      setTimeout(() => {
+        this.$router.push('/dashboard/userslist');
+      },100)
     },
     cancel () {
       this.$router.push('/dashboard/userslist');

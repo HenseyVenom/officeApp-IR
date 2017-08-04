@@ -13,6 +13,7 @@
           <th>Role</th>
           <th>Accepted</th>
           <th>White</th>
+          <th></th>
         </tr>
       </thead>
       <tbody class="searchable">
@@ -24,6 +25,7 @@
           <td>{{user.role}}</td>
           <td>{{user.accepted}}</td>
           <td>{{user.white}}</td>
+          <td><a @click="del(user)"><img src="assets/cancel.png"/></a></td>
         </tr>
       </tbody>
     </table> 
@@ -42,6 +44,11 @@ export default {
   mounted() {
     this.$store.dispatch('LOAD_USERS_LIST');
   },
+  methods: {
+    del(user) {
+      this.$store.dispatch('DELETE_USER',user);
+    }
+  }
 }
 </script>   
 

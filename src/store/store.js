@@ -40,6 +40,14 @@ const store = new Vuex.Store({
         console.log(err);
       });
     },
+    DELETE_USER({ commit }, user) {
+      commit('DELETE_ACCOUNT', user);
+      axios.delete('http://localhost:4040/api/users', user).then((response) => {
+        console.log(response);
+      }, (err) => {
+        console.log(err);
+      });
+    },
     LOG_IN({ commit }, creds) {
       commit(LOGIN);
       return new Promise((resolve) => {
@@ -63,6 +71,9 @@ const store = new Vuex.Store({
     },
     SET_NEW_USER(state, list) {
       state.users.push(list);
+    },
+    DELETE_ACCOUNT(state, account) {
+      state.users.$remove(account);
     },
     [LOGIN](state) {
       state.pending = true;
