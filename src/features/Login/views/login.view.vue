@@ -5,8 +5,8 @@
         <div class="wrapper">
           <form class="form-signin"  @submit.prevent="login({ userEmail, userPassword })">    
             <login-header caption="Sign in to your admin account"/>   
-            <input-loginpanel type="text" name="userEmail" placeholder="Email Address" required="" autofocus=""  v-model="userEmail"/>
-            <input-loginpanel type="password" name="userPassword" placeholder="Password" required="" autofocus="" v-model="userPassword"/>    
+            <input-panel type="text" name="userEmail" placeholder="Email Address" required="" autofocus=""  v-model="userEmail"/>
+            <input-panel type="password" name="userPassword" placeholder="Password" required="" autofocus="" v-model="userPassword"/>    
             <label class="checkbox">
               <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label> 

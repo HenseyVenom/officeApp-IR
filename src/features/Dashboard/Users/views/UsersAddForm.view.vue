@@ -43,6 +43,7 @@ export default {
   methods: {
     addUser () {
       this.$store.dispatch('ADD_NEW_USER',this.user)
+      
     },
     cancel () {
       this.$router.push('/dashboard/userslist');

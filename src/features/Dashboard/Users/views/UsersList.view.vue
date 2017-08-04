@@ -13,6 +13,7 @@
           <th>Role</th>
           <th>Accepted</th>
           <th>White</th>
+          <th></th>
         </tr>
       </thead>
       <tbody class="searchable">
@@ -24,6 +25,7 @@
           <td>{{user.role}}</td>
           <td>{{user.accepted}}</td>
           <td>{{user.white}}</td>
+          <td><button v-on:click="deleteUser(user)">X</button></td>
         </tr>
       </tbody>
     </table> 
@@ -42,8 +44,13 @@ export default {
   mounted() {
     this.$store.dispatch('LOAD_USERS_LIST');
   },
+  methods: {
+    deleteUser (user) {
+      this.users.splice(this.users.indexOf(user),1);
+    }
+  }
 }
-</script>   
+</script>   y
 
 
 <style>
