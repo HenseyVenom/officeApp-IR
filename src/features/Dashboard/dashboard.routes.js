@@ -66,7 +66,7 @@ export default [
       },
       {
         name: 'dashboard.beaconslist',
-        path: 'beaconsaddform',
+        path: 'beaconslist',
         component: BeaconsListView,
       },
       {

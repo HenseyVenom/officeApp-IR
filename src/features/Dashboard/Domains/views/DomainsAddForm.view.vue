@@ -15,7 +15,11 @@
 
 <script>
 export default {
+<<<<<<< HEAD
   name: 'domainaddform',
+=======
+  name: 'domainsaddform',
+>>>>>>> robert
   data: () => {
     return {
       level: {
@@ -37,4 +41,8 @@ export default {
   border: 1px dashed #FF3300 !important;
 
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> robert

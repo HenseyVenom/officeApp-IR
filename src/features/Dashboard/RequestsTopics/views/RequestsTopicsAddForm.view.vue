@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'requesttopicaddform',
+  name: 'requeststopicsaddform',
   data: () => {
     return {
         level: {
