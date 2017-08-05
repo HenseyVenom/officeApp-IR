@@ -36,14 +36,14 @@ export default {
 </script>
 
 <style>
-.containe2{
-    padding: 10px;
-    margin-top: 50px;
-    margin-right: 30%;
-    margin-left: 30%;
+.containe2 {
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 30%;
+  margin-left: 30%;
 }
-.bord{
-  border: 1px dashed #FF3300 !important;
 
+.bord {
+  border: 1px dashed #FF3300 !important;
 }
 </style>

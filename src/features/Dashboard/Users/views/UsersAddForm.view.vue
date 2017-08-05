@@ -3,13 +3,13 @@
     <form class="form-control bord">
       <legend>Add user</legend>
       <label>Name</label>
-      <input-panel id="name" v-on:change="(e) => this.user.name = e"></input-panel>
+      <input-panel id="name" required="" v-on:change="(e) => this.user.name = e"></input-panel>
       <label>Surname</label>
-      <input-panel id="surname" v-on:change="(e) => this.user.surname = e"></input-panel>
+      <input-panel id="surname" required="" v-on:change="(e) => this.user.surname = e"></input-panel>
       <label>E-mail</label>
-      <input-panel id="email" v-on:change="(e) => this.user.email = e"></input-panel>
+      <input-panel id="email" required="" v-on:change="(e) => this.user.email = e"></input-panel>
       <label>Role</label>
-      <input-select id="role" v-bind:options="options"></input-select>
+      <input-select v-bind:options="options"></input-select>
       <input-checkbox caption="Accepted"></input-checkbox>
       <input-checkbox caption="Enable" checked></input-checkbox>
       <label>Description</label>

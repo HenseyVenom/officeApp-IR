@@ -1,5 +1,5 @@
 <template>
-  <div class="containe2"> 
+  <div class="containe2">
     <form class="form-control bord">
       <legend>Add device</legend>
       <label>Number</label>
@@ -26,4 +26,5 @@ export default {
 </script>
 
 <style>
+
 </style>

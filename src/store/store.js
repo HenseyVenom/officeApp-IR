@@ -6,10 +6,6 @@ import axios from 'axios';
 
 Vue.use(Vuex);
 
-// const LOGIN = 'LOGIN';
-// const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-// const LOGOUT = 'LOGOUT';
-
 // Create the Vuex instance by combining the state actions mutations getters and modules objects
 // Then export the Vuex store for use by components in our awesome Vue application
 const store = new Vuex.Store({
@@ -26,7 +22,7 @@ const store = new Vuex.Store({
   // Actions are where you define the calls that will commit changes to your store.
   actions: {
     LOAD_USERS_LIST({ commit }) {
-      axios.get('http://localhost:4040/api/users').then((response) => {
+      return axios.get('http://localhost:4040/api/users').then((response) => {
         commit('SET_USERS_LIST', { list: response.data });
       }, (err) => {
         console.log(err);
@@ -41,12 +37,9 @@ const store = new Vuex.Store({
     },
     DELETE_USER({ commit }, user) {
       commit('DELETE_ACCOUNT', user.id);
-      console.log('to jest id :', user.id);
-      axios.delete('http://localhost:4040/api/users', { id: user.id }).then(() => {
-        console.log('sdfsadf');
+      return axios.delete(`http://localhost:4040/api/users/${user.id}`).then(() => {
       }, (err) => {
         console.log(err);
-        console.log(user.id);
       });
     },
     LOG_IN({ commit }) {
@@ -74,9 +67,8 @@ const store = new Vuex.Store({
       state.users.push(list);
     },
     DELETE_ACCOUNT(state, account) {
-      console.log(account);
-      const i = state.users.map(user => user.id).indexOf(account);
-      state.users.splice(i, 1);
+      const id = state.users.map(user => user.id).indexOf(account);
+      state.users.splice(id, 1);
     },
     LOGIN(state) {
       state.pending = true;

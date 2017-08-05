@@ -1,5 +1,5 @@
 <template>
-  <input id="filter" type="text" class="form-box form-control" placeholder="Type here...">
+  <input id="filter" type="text" class="form-box form-control" >
 </template>
 
 <script>
@@ -23,8 +23,8 @@ $(document).ready(function () {
 <style>
 .form-box {
   width: 280px !important;
-  display: inline !important;
-  height: 30px;
+  height: 30px !important;
+  display: initial !important;
 }
 
 .form-control:focus {
