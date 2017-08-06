@@ -32,9 +32,12 @@
             </a>
           </td>
           <td>
-            <a v-on:click="editUser(user)">
-              <img src="assets/edit.png" class="col-md-3" />
-            </a>
+            <router-link to='/dashboard/usersupdateform' class="tools">
+              <a>
+                <img src="assets/edit.png" class="col-md-3" />
+              </a>
+            </router-link>
+  
           </td>
         </tr>
       </tbody>
@@ -56,11 +59,8 @@ export default {
   },
   methods: {
     deleteUser(user) {
-      this.users.splice(this.users.indexOf(user), 1);
+      this.$store.dispatch('REMOVE_USER', user);
     },
-    updateUserProfile() {
-      this.$store.dispatch('UPDATE_USER_PROFILE')
-    }
   }
 }
 </script> 

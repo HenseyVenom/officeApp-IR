@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'domainaddform',
+  name: 'domainsaddform',
   data: () => {
     return {
       level: {

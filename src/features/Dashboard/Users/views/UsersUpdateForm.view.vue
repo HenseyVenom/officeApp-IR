@@ -1,7 +1,7 @@
 <template>
-  <div class="containe2"> 
+  <div class="containe2">
     <form class="form-control bord">
-      <legend>Add user</legend>
+      <legend>Edit user</legend>
       <label>Name</label>
       <input-panel id="name" v-on:change="(e) => this.user.name = e"></input-panel>
       <label>Surname</label>
@@ -20,7 +20,7 @@
       <input-panel></input-panel>
       <label>Office</label>
       <input-select v-bind:options="options2"></input-select>
-      <buttonhut class="btn btn-sm btn-success" caption="Save" @click="addUser"></buttonhut>
+      <buttonhut class="btn btn-sm btn-success" caption="Save" @click="updateUser"></buttonhut>
       <buttonhut class="btn btn-sm" caption="Cancel" @click="cancel"></buttonhut>
     </form>
   </div>
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'usersaddform',
+  name: 'usersupdateform',
   data: () => {
     return {
       options: [
@@ -41,27 +41,26 @@ export default {
     };
   },
   methods: {
-    addUser () {
-      this.$store.dispatch('ADD_NEW_USER',this.user)
-      setTimeout(() => {
-        this.$router.push('/dashboard/userslist');
-      },100)
+    updateUser() {
+      console.log(user.id);
+      this.$store.dispatch('UPDATE_USER_PROFILE', user);
     },
-    cancel () {
+    cancel() {
       this.$router.push('/dashboard/userslist');
     }
   }
 }
 </script>
-<style>
-.containe2{
-    padding: 10px;
-    margin-top: 50px;
-    margin-right: 30%;
-    margin-left: 30%;
-}
-.bord{
-  border: 1px dashed #FF3300 !important;
 
+<style>
+.containe2 {
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+.bord {
+  border: 1px dashed #FF3300 !important;
 }
 </style>

@@ -7,23 +7,6 @@
     <a href="#" v-if="isLoggedIn" @click="logout"><button-logout type="submit" caption="Log out"></button-logout></a> 
   </nav>
 
-
-  
-  <!--
-  <div>
-    <hr/> This is navigation:
-    <div style="height: 50px; background-color: yellow; color: hotpink; margin: 20px;">
-      <router-link to="/foo/alpha">Alpha</router-link>
-      <router-link to="/foo/bravo">Bravo</router-link>
-      |
-      <router-link to="/login">Logout</router-link>
-    </div>
-    <hr/>
-    This is content:
-    <router-view></router-view>
-  </div> -->
-  
-
 </template>
 
 

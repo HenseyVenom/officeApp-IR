@@ -1,5 +1,5 @@
 <template>
-  <div class="containe2"> 
+  <div class="containe2">
     <form class="form-control bord">
       <legend>Add POIs</legend>
       <label>Name</label>

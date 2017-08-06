@@ -1,5 +1,5 @@
 <template>
-  <div class="containe2"> 
+  <div class="containe2">
     <form class="form-control bord">
       <legend>Add beacon</legend>
       <label>Name</label>
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'beaconaddform',
+  name: 'beaconsaddform',
   data: () => {
     return {
        level: {
