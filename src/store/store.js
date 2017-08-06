@@ -76,7 +76,7 @@ const store = new Vuex.Store({
       axios.put('http://localhost:4040/api/users').then((response) => {
         console.log(response);
       }, (err) => {
-        console.error(err);
+        console.error(err); 
       });
     },
     LOG_IN({
