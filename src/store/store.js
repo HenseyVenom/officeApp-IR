@@ -14,57 +14,103 @@ const LOGOUT = 'LOGOUT';
 // Then export the Vuex store for use by components in our awesome Vue application
 const store = new Vuex.Store({
 
-  // This is where you define the data structure of your application.
-  // You can also set default or initial state here.
-  state: {
-    users: [],
-    // In our app, we need to know if the user is logged in
-    // by checking if the user has a token in the browser local storage.
-    isLoggedIn: !!localStorage.getItem('token'),
-  },
+      // This is where you define the data structure of your application.
+      // You can also set default or initial state here.
+      state: {
+        users: [],
+        userProfile: {},
+        // In our app, we need to know if the user is logged in
+        // by checking if the user has a token in the browser local storage.
+        isLoggedIn: !!localStorage.getItem('token'),
+      },
 
-  // Actions are where you define the calls that will commit changes to your store.
-  actions: {
-    LOAD_USERS_LIST({ commit }) {
-      axios.get('http://localhost:4040/api/users').then((response) => {
-        commit('SET_USERS_LIST', { list: response.data });
-      }, (err) => {
-        console.log(err);
-      });
-    },
-    ADD_NEW_USER({ commit }, user) {
-      commit('SET_NEW_USER', user);
-      axios.post('http://localhost:4040/api/users', user).then((response) => {
-        console.log(response);
-      }, (err) => {
-        console.log(err);
-      });
-    },
-    LOG_IN({ commit }, creds) {
-      commit(LOGIN);
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          localStorage.setItem('token', 'JWT');
-          commit(LOGIN_SUCCESS);
-          resolve();
-        }, 1);
-      });
-    },
-    LOG_OUT({ commit }) {
-      localStorage.removeItem('token');
-      commit(LOGOUT);
-    },
-  },
+      // Actions are where you define the calls that will commit changes to your store.
+      actions: {
+        LOAD_USERS_LIST({
+          commit
+        }) {
+          axios.get('http://localhost:4040/api/users').then((response) => {
+            commit('SET_USERS_LIST', {
+              list: response.data
+            });
+          }, (err) => {
+            console.log(err);
+          });
+        },
+        ADD_NEW_USER({
+          commit
+        }, user) {
+          commit('SET_NEW_USER', user);
+          axios.post('http://localhost:4040/api/users', user).then((response) => {
+            console.log(response);
+          }, (err) => {
+            console.log(err);
+          });
+        },
+        LOAD_USER_PROFILE({
+          commit
+        }) {
+          axios.get('http://localhost:4040/api/users').then((response) => {
+            commit('SET_USER_PROFILE', {
+              profile: response.data,
+            });
+          }, (err) => {
+            console.log(err);
+          });
+        },
+        UPDATE_USER_PROFILE(store, {
+          commit
+        }) {
+          axios.put('/profile/update', {
+            profile: store.state.userProfile
+          }).then((response) => {
+            commit('SET_USER_PROFILE', {
+              profile: response.data
+            })
+          }, (err) => {
+            console.log(err)
+          })
+        }
+      },
+      /* LOG_IN({
+          commit
+        }, creds) {
+          commit(LOGIN);
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              localStorage.setItem('token', 'JWT');
+              commit(LOGIN_SUCCESS);
+              resolve();
+            }, 1);
+          });
+        },
+        LOG_OUT({
+          commit
+        }) {
+          localStorage.removeItem('token');
+          commit(LOGOUT);
+        },
+      }, */
 
-  // The mutations calls are the only place that the store can be updated.
-  mutations: {
-    SET_USERS_LIST(state, { list }) {
-      state.users = list;
-    },
-    SET_NEW_USER(state, list) {
-      state.users.push(list);
-    },
-    [LOGIN](state) {
+      // The mutations calls are the only place that the store can be updated.
+      mutations: {
+      /*  SET_USERS_LIST(state, {
+          list
+        }) {
+          state.users = list;
+        },
+        SET_NEW_USER(state, list) {
+          state.users.push(list);
+        },
+        SET_USER_PROFILE(state, {
+          profile
+        }) {
+          state.userProfile = profile;
+        },
+        EDIT_USER_PROFILE(state, payload) {
+          state.userProfile.payload = payload
+        },
+         [LOGIN](state) {
       state.pending = true;
     },
     [LOGIN_SUCCESS](state) {
@@ -73,21 +119,20 @@ const store = new Vuex.Store({
     },
     [LOGOUT](state) {
       state.isLoggedIn = false;
-    },
+    }, 
 
-  },
+  },*/
 
-  // Getters are a way to grab computed data from the store
-  // For example if you have a project list one component might only want to show projects
-  // that are completed
-  getters: {
-    isLoggedIn: state => state.isLoggedIn,
-  },
+        // Getters are a way to grab computed data from the store
+        // For example if you have a project list one component might only want to show projects
+        // that are completed
+        getters: {
+          isLoggedIn: state => state.isLoggedIn,
+        },
 
-  // As your application grows this is a good way to organize your codebase
-  modules: {
-  },
+        // As your application grows this is a good way to organize your codebase
+        modules: {}
 
-});
+      });
 
-export default store;
+    export default store;
