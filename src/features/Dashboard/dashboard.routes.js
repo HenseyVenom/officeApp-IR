@@ -8,7 +8,7 @@ import UsersListView from './Users/views/UsersList.view.vue';
 import UsersAddFormView from './Users/views/UsersAddForm.view.vue';
 import UsersUpdateFormView from './Users/views/UsersUpdateForm.view.vue';
 
-// Beacons eacons views
+// Beacons beacons views
 import BeaconsListView from './Beacons/views/BeaconsList.view.vue';
 import BeaconsAddFormView from './Beacons/views/BeaconsAddForm.view.vue';
 

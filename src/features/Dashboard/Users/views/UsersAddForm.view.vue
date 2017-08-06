@@ -43,7 +43,9 @@ export default {
   methods: {
     addUser () {
       this.$store.dispatch('ADD_NEW_USER',this.user)
-      
+      setTimeout(() => {
+        this.$router.push('/dashboard/userslist');
+      },100)
     },
     cancel () {
       this.$router.push('/dashboard/userslist');
@@ -51,7 +53,6 @@ export default {
   }
 }
 </script>
-
 <style>
 .containe2{
     padding: 10px;
