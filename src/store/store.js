@@ -43,8 +43,6 @@ const store = new Vuex.Store({
       commit('SET_NEW_USER', user);
       return axios.post('http://localhost:4040/api/users', user).then((response) => {
         console.log(response);
-       
-     // document.location = '/dashboard/userslist';
       }, (err) => {
         console.log(err);
       });
