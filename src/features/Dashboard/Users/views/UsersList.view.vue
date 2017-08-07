@@ -14,6 +14,7 @@
           <th>Accepted</th>
           <th>White</th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody class="searchable">
@@ -29,6 +30,13 @@
             <a @click="del(user)">
               <img src="assets/cancel.png" />
             </a>
+          </td>
+          <td>
+            <router-link to='/dashboard/usersupdateform' >
+              <a>
+                <img src="assets/edit.png" />
+              </a>
+            </router-link>
           </td>
         </tr>
       </tbody>
@@ -51,7 +59,7 @@ export default {
   methods: {
     del(user) {
       this.$store.dispatch('DELETE_USER', user);
-    }
+    },
   }
 }
 </script>   

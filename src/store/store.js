@@ -42,6 +42,14 @@ const store = new Vuex.Store({
         console.log(err);
       });
     },
+    UPDATE_USER_PROFILE({ commit }, user) {
+      commit('UPDATE_USER_PROFILE', user);
+      axios.put('http://localhost:4040/api/users').then((response) => {
+        console.log(response);
+      }, (err) => {
+        console.error(err);
+      });
+    },
     LOG_IN({ commit }) {
       commit('LOGIN');
       return new Promise((resolve) => {
@@ -69,6 +77,15 @@ const store = new Vuex.Store({
     DELETE_ACCOUNT(state, account) {
       const id = state.users.map(user => user.id).indexOf(account);
       state.users.splice(id, 1);
+    },
+    UPDATE_USER_PROFILE(state, user) {
+      const foundUser = state.users.find(x => x.id === user.id);
+      foundUser.name = user.name;
+      foundUser.surname = user.surname;
+      foundUser.email = user.email;
+      foundUser.role = user.role;
+      foundUser.accepted = user.accepted;
+      foundUser.white = user.white;
     },
     LOGIN(state) {
       state.pending = true;

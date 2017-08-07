@@ -1,15 +1,14 @@
 <template>
     <select id="select" name="select" class="form-control form-border">
-        <option>{{ option }}</option>
-        <option>{{ option }}</option>
-        <option>{{ option }}</option>
-        <option>{{ option }}</option>
+        <option v-for="option in options" v-bind:key="option">
+            {{ option }}
+        </option>
     </select>
 </template>
 
 <script>
 export default {
-    props: ['option'],
+    props: ['options'],
     name: 'input-select',
     methods: {
         change() {
@@ -25,9 +24,5 @@ export default {
     background-color: #fff;
     border-color: #FF3300 !important;
     outline: none;
-}
-
-.form-border {
-    margin-bottom: 20px;
 }
 </style>

@@ -6,6 +6,7 @@ import DashboardView from './dashboard.view.vue';
 // Users views
 import UsersListView from './Users/views/UsersList.view.vue';
 import UsersAddFormView from './Users/views/UsersAddForm.view.vue';
+import UsersUpdateFormView from './Users/views/UsersUpdateForm.view.vue';
 
 // Beacons eacons views
 import BeaconsListView from './Beacons/views/BeaconsList.view.vue';
@@ -63,6 +64,11 @@ export default [
         name: 'dashboard.useraddform',
         path: 'useraddform',
         component: UsersAddFormView,
+      },
+      {
+        name: 'dashboard.usersupdateform',
+        path: 'usersupdateform',
+        component: UsersUpdateFormView,
       },
       {
         name: 'dashboard.beaconslist',

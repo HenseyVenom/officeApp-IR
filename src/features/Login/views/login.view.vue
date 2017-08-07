@@ -81,16 +81,4 @@ export default {
   height: auto;
   padding: 10px;
 }
-
-input[type="text"] {
-  margin-bottom: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 </style> 
