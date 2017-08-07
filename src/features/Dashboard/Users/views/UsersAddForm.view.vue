@@ -1,5 +1,5 @@
 <template>
-  <div class="containe2"> 
+  <div class="containe2">
     <form class="form-control bord">
       <legend>Add user</legend>
       <label>Name</label>
@@ -41,27 +41,26 @@ export default {
     };
   },
   methods: {
-    addUser () {
-      this.$store.dispatch('ADD_NEW_USER',this.user)
-      setTimeout(() => {
+    addUser() {
+      this.$store.dispatch('ADD_NEW_USER', this.user).then((response) => {
         this.$router.push('/dashboard/userslist');
-      },100)
+      });
     },
-    cancel () {
+    cancel() {
       this.$router.push('/dashboard/userslist');
     }
   }
 }
 </script>
 <style>
-.containe2{
-    padding: 10px;
-    margin-top: 50px;
-    margin-right: 30%;
-    margin-left: 30%;
+.containe2 {
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 30%;
+  margin-left: 30%;
 }
-.bord{
-  border: 1px dashed #FF3300 !important;
 
+.bord {
+  border: 1px dashed #FF3300 !important;
 }
 </style>

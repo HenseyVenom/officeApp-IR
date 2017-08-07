@@ -31,7 +31,7 @@ const store = new Vuex.Store({
     }) {
       axios.get('http://localhost:4040/api/users').then((response) => {
         commit('SET_USERS_LIST', {
-          list: response.data
+          list: response.data,
         });
       }, (err) => {
         console.log(err);
@@ -41,7 +41,7 @@ const store = new Vuex.Store({
       commit,
     }, user) {
       commit('SET_NEW_USER', user);
-      axios.post('http://localhost:4040/api/users', user).then((response) => {
+      return axios.post('http://localhost:4040/api/users', user).then((response) => {
         console.log(response);
       }, (err) => {
         console.log(err);
@@ -76,12 +76,12 @@ const store = new Vuex.Store({
       axios.put('http://localhost:4040/api/users').then((response) => {
         console.log(response);
       }, (err) => {
-        console.error(err); 
+        console.error(err);
       });
     },
     LOG_IN({
       commit,
-    }, creds) {
+    }) {
       commit(LOGIN);
       return new Promise((resolve) => {
         setTimeout(() => {
@@ -102,7 +102,7 @@ const store = new Vuex.Store({
   // The mutations calls are the only place that the store can be updated.
   mutations: {
     SET_USERS_LIST(state, {
-      list
+      list,
     }) {
       state.users = list;
     },
@@ -123,7 +123,7 @@ const store = new Vuex.Store({
       foundUser.white = user.white;
     },
     SET_USER_PROFILE(state, {
-      profile
+      profile,
     }) {
       state.userProfile = profile;
     },
@@ -151,8 +151,9 @@ const store = new Vuex.Store({
   },
 
   // As your application grows this is a good way to organize your codebase
-  modules: {}
+  modules: {},
 
 });
 
 export default store;
+
