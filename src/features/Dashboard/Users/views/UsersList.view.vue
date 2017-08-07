@@ -1,6 +1,6 @@
 <template>
   <div class="containe">
-    <router-link to="/dashboard/useraddform" class="tools">
+    <router-link to="/dashboard/usersaddform" class="tools">
       <img src="assets/add.png" />
     </router-link>
     <table id="userTable" class="table table-hover">
@@ -32,12 +32,9 @@
             </a>
           </td>
           <td>
-            <router-link to='/dashboard/usersupdateform' class="tools">
-              <a>
-                <img src="assets/edit.png" class="col-md-3" />
-              </a>
+            <router-link to='/dashboard/usersupdateform'>
+                <img src="assets/edit.png" />
             </router-link>
-  
           </td>
         </tr>
       </tbody>
@@ -72,14 +69,12 @@ export default {
   padding-top: 5px;
   padding-left: 100px;
   padding-right: 100px;
-  overflow: auto;
 }
 
 
 .table-title {
   background-color: #303030;
   color: white;
-  ;
 }
 
 .tools {
