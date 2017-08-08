@@ -1,5 +1,5 @@
 <template>
-  <input id="filter" type="text" class="form-box form-control" >
+  <input id="filter" type="text" class="form-box form-control">
 </template>
 
 <script>

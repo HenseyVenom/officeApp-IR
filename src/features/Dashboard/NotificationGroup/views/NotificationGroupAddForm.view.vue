@@ -4,7 +4,6 @@
       <legend>Add group</legend>
       <label>Name</label>
       <input-panel></input-panel>
-      <input-search type="search" name="search" placeholder="Search"></input-search>
       <br/>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>

@@ -4,7 +4,6 @@
     <router-link to="/login">
       <button-switch-company type="submit" caption="Switch Company"></button-switch-company>
     </router-link>
-    <!--<router-link ><button-logout type="submit" caption="Log out" v-if="isLoggedIn" @click="logout"></button-logout></router-link>-->
     <a href="#" v-if="isLoggedIn" @click="logout">
       <button-logout type="submit" caption="Log out"></button-logout>
     </a>

@@ -3,10 +3,21 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="wrapper">
-          <form class="form-signin" @submit.prevent="login({ userEmail, userPassword })">
+          <form class="form-signin" @submit.prevent="validateBeforeSubmit">
             <login-header caption="Sign in to your admin account" />
-            <input-panel type="text" name="userEmail" placeholder="Email Address" required="" autofocus="" v-model="userEmail" />
-            <input-panel type="password" name="userPassword" placeholder="Password" required="" autofocus="" v-model="userPassword" />
+            <div class="column is-12">
+              <p :class="{ 'control': true }">
+                <input class="form-control form-border" v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Type your email address ..." v-model="userEmail" />
+                <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+              </p>
+            </div>
+  
+            <div class="column is-12">
+              <p :class="{ 'control': true }">
+                <input class="form-control form-border" v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('password') }" name="password" type="password" placeholder="Type your password address ..." v-model="userPassword" />
+                <span v-show="errors.has('password')" class="help is-danger">{{ errors.first('password') }}</span>
+              </p>
+            </div>
             <label class="checkbox">
               <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label>
@@ -34,14 +45,22 @@ export default {
         this.$router.push("/dashboard");
         location.reload();
       });
+    },
+    validateBeforeSubmit() {
+      this.$validator.validateAll().then(result => {
+        if (result) {
+          this.$store.dispatch("LOG_IN", {
+            userEmail: this.userEmail,
+            userPassword: this.userPassword
+          }).then(() => {
+            this.$router.push("/dashboard");
+            location.reload();
+          });
+        } else {
+          alert('Correct them errors!');
+        }
+      });
     }
-    /*login() {
-      window.console.log(`Logging in with login ${this.userLogin} and password ${this.userPassword}`);
-      // example of usage of programmatic route change
-      // all components have access to this.$router
-      this.$router.push('/dashboard');
-      location.reload();
-    },*/
   },
   computed: {
     isLoggedIn() {
@@ -80,5 +99,9 @@ export default {
   font-size: 16px;
   height: auto;
   padding: 10px;
+}
+
+.form-border {
+  margin-bottom: 10px;
 }
 </style> 
