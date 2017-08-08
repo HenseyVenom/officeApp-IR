@@ -1,5 +1,6 @@
 <template>
-  <router-view></router-view>
+  <router-view>
+  </router-view>
 </template>
 
 <script>
@@ -15,11 +16,12 @@ import Bootstrap from 'bootstrap';
 require('bootstrap-sass');
 
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
 
 const routes = [
   {
     path: '/',
-     redirect(/* routeInfo */) {
+    redirect(/* routeInfo */) {
       /*
         example:
         if (someService.loggedIn) {

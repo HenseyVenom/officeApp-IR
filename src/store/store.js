@@ -6,10 +6,6 @@ import axios from 'axios';
 
 Vue.use(Vuex);
 
-const LOGIN = 'LOGIN';
-const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-const LOGOUT = 'LOGOUT';
-
 // Create the Vuex instance by combining the state actions mutations getters and modules objects
 // Then export the Vuex store for use by components in our awesome Vue application
 const store = new Vuex.Store({
@@ -97,7 +93,7 @@ const store = new Vuex.Store({
       return new Promise((resolve) => {
         setTimeout(() => {
           localStorage.setItem('token', 'JWT');
-          commit(LOGIN_SUCCESS);
+          commit('LOGIN_SUCCESS');
           resolve();
         }, 1);
       });
@@ -106,7 +102,7 @@ const store = new Vuex.Store({
       commit,
     }) {
       localStorage.removeItem('token');
-      commit(LOGOUT);
+      commit('LOGOUT');
     },
   },
 
@@ -144,11 +140,11 @@ const store = new Vuex.Store({
     [LOGIN](state) {
       state.pending = true;
     },
-    [LOGIN_SUCCESS](state) {
+    LOGIN_SUCCESS(state) {
       state.isLoggedIn = true;
       state.pending = false;
     },
-    [LOGOUT](state) {
+    LOGOUT(state) {
       state.isLoggedIn = false;
     },
 

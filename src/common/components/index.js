@@ -1,3 +1,5 @@
+// index.js
+
 import Vue from 'vue';
 
 import ButtonHut from './Buttons/ButtonHut.vue';
@@ -21,4 +23,3 @@ Vue.component(NavigationItem.name, NavigationItem);
 Vue.component(InputSelect.name, InputSelect);
 Vue.component(InputCheckBox.name, InputCheckBox);
 Vue.component(InputAddFile.name, InputAddFile);
-

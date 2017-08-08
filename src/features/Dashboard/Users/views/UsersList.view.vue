@@ -62,7 +62,6 @@ export default {
 }
 </script> 
 
-
 <style>
 .containe {
   text-align: center;

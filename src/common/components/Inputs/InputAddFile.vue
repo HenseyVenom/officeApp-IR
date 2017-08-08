@@ -23,6 +23,7 @@ export default {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .add-border {
     border: 1px solid #d3d3d3;
     outline: none;

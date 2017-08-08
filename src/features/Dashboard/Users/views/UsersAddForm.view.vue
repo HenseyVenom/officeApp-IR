@@ -9,7 +9,7 @@
       <label>E-mail</label>
       <input-panel id="email" v-on:change="(e) => this.user.email = e"></input-panel>
       <label>Role</label>
-      <input-select id="role" v-bind:options="options"></input-select>
+      <input-select v-bind:options="options"></input-select>
       <input-checkbox caption="Accepted"></input-checkbox>
       <input-checkbox caption="Enable" checked></input-checkbox>
       <label>Description</label>
