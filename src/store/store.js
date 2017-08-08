@@ -79,6 +79,17 @@ const store = new Vuex.Store({
         console.error(err);
       });
     },
+     /* UPDATE_USER_PROFILE(profile, {
+       commit,
+     }) {
+       console.log(profile);
+       commit('UPDATE_USER_PROFILE');
+       axios.put('http://localhost:4040/api/users', { profile: store.state.userProfile }).then((response) => {
+         commit('SET_USER_PROFILE', { profile: response.data });
+       }, (err) => {
+         console.error(err);
+       });
+     }, */
     LOG_IN({
       commit,
     }) {
@@ -156,4 +167,3 @@ const store = new Vuex.Store({
 });
 
 export default store;
-
