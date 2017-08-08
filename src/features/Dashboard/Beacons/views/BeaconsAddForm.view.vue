@@ -24,7 +24,7 @@
       <input-panel>A2F03D89-7094-4FF9-924E-E9524F52914B</input-panel>
       <input-checkbox caption="Enable" v-model="level.enable"></input-checkbox>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+      <buttonhut class="btn btn-sm btn-danger" caption="Cancel"></buttonhut>
     </form>
   </div>
 </template>

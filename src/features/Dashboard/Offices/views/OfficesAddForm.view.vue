@@ -11,7 +11,7 @@
       <input-checkbox caption="Enable" checked></input-checkbox>
       <input-addfile content="Image"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+      <buttonhut class="btn btn-sm btn-danger" caption="Cancel"></buttonhut>
     </form>
   </div>
 </template>

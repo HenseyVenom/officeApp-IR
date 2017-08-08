@@ -87,7 +87,7 @@
       </select>
   
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel" @click="cancel"></buttonhut>
+      <buttonhut class="btn btn-sm btn-danger" caption="Cancel" @click="cancel"></buttonhut>
     </form>
   </div>
 </template>

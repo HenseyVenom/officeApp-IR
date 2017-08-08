@@ -1,11 +1,15 @@
 <template>
   <nav class="navbar navbar-top">
-    <input-search type="search" name="search" placeholder="Search" required="" autofocus="" />
+    <input-search type="search" name="search" class="search-position" placeholder="Search" required="" autofocus="" />
     <router-link to="/login">
-      <button-switch-company type="submit" caption="Switch Company"></button-switch-company>
+      <img src="assets/shuffle.png" class=" btn-custom" />
+      <buttonhut type="submit" caption="Switch Company" class="btn-custom"></buttonhut>
+  
     </router-link>
+  
     <a href="#" v-if="isLoggedIn" @click="logout">
-      <button-logout type="submit" caption="Log out"></button-logout>
+      <img src="assets/logout.png" class="btn-custom"/>
+      <buttonhut type="submit" caption="Log out" class="btn-custom "></buttonhut>
     </a>
   </nav>
 </template>
@@ -24,7 +28,6 @@ export default {
       return this.$store.getters.isLoggedIn;
     }
   }
-
 };
 </script>
 
@@ -34,5 +37,18 @@ export default {
   display: block !important;
   padding: 0px !important;
   background-color: #FF3300;
+}
+.btn-custom {
+  padding: 10px 10px 10px 0;
+  background-color: #FF3300;
+  margin: 0px;
+  border: 0px;
+  color: white;
+}
+.btn-custom:hover{
+    opacity: 0.5;
+}
+.search-position {
+  right: 20px;
 }
 </style>
