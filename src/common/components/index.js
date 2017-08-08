@@ -1,7 +1,6 @@
 import Vue from 'vue';
 
 import ButtonHut from './Buttons/ButtonHut.vue';
-import ButtonLogOut from './Buttons/ButtonLogOut.vue';
 import InputPanel from './Inputs/InputPanel.vue';
 import InputSearch from './Inputs/InputSearch.vue';
 import LoginHeader from './LoginHeader/LoginHeader.vue';
@@ -16,7 +15,6 @@ Vue.component(ButtonHut.name, ButtonHut);
 Vue.component(InputPanel.name, InputPanel);
 Vue.component(InputSearch.name, InputSearch);
 Vue.component(LoginHeader.name, LoginHeader);
-Vue.component(ButtonLogOut.name, ButtonLogOut);
 Vue.component(NavigationBarTop.name, NavigationBarTop);
 Vue.component(NavigationBarBottom.name, NavigationBarBottom);
 Vue.component(NavigationItem.name, NavigationItem);
