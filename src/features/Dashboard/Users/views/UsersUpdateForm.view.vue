@@ -21,7 +21,7 @@
             <label>Office</label>
             <input-select v-bind:options="options2"></input-select>
             <buttonhut class="btn btn-sm btn-success" caption="Save" @click="updateUser"></buttonhut>
-            <buttonhut class="btn btn-sm" caption="Cancel" @click="cancel"></buttonhut>
+            <buttonhut class="btn btn-sm btn-danger" caption="Cancel" @click="cancel"></buttonhut>
         </form>
     </div>
 </template>

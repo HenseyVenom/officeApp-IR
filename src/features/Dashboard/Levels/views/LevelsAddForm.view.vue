@@ -15,7 +15,7 @@
       <input-addfile content="Detail Item Map"></input-addfile>
       <input-addfile content="Area Map"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+      <buttonhut class="btn btn-sm btn-danger" caption="Cancel"></buttonhut>
     </form>
   
   </div>
