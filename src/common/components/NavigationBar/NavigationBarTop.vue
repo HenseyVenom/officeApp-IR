@@ -1,10 +1,15 @@
 <template>
 
   <nav class="navbar navbar-top">
-    <input-search type="search" name="search" placeholder="Search" required="" autofocus="" /> 
-    <router-link to="/login"><button-switch-company type="submit" caption="Switch Company"></button-switch-company></router-link>
-    <!--<router-link ><button-logout type="submit" caption="Log out" v-if="isLoggedIn" @click="logout"></button-logout></router-link>-->
-    <a href="#" v-if="isLoggedIn" @click="logout"><button-logout type="submit" caption="Log out"></button-logout></a> 
+    <input-search type="search" name="search" class="search-position" placeholder="Search" required="" autofocus="" /> 
+    <router-link to="/login">
+    <img src="assets/shuffle.png" class="btn-switch-company"/>
+      <buttonhut type="submit" caption="Switch Company" class="btn-switch-company"></buttonhut>
+        
+    </router-link>
+    
+    <a href="#" v-if="isLoggedIn" @click="logout">
+      <button-logout type="submit" caption="Log out"></button-logout></a> 
   </nav>
 
 </template>
@@ -33,5 +38,19 @@
   display: block !important;
   padding: 0px !important;
   background-color: #FF3300;
+}
+
+.btn-switch-company{
+    padding: 0;
+    background-color: #FF3300;
+    margin: 0px;
+    border: 0px;
+    color: white;
+}
+.search-position{
+  right: 20px;
+}
+.btn-switch-company:hover{
+    opacity: 0.5;
 }
 </style>

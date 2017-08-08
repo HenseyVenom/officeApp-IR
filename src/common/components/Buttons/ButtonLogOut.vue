@@ -1,6 +1,5 @@
 <template>
   <button class="btn-logout" v-on:click="click">
-    <!-- <img src="${require(`assets/logout.png`)}"/> -->
     <img src="assets/logout.png"/>
     {{ caption }} 
   </button>
