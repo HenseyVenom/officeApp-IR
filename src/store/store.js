@@ -68,13 +68,13 @@ const store = new Vuex.Store({
         console.log(err);
       });
     },
-    UPDATE_USER_PROFILE({
+    UPDATE_USER_PROFILE(profile, {
       commit,
-    }, user) {
-      console.log(user.id);
-      commit('UPDATE_USER_PROFILE', user);
-      axios.put('http://localhost:4040/api/users').then((response) => {
-        console.log(response);
+    }) {
+      console.log(profile);
+      commit('UPDATE_USER_PROFILE');
+      axios.put('http://localhost:4040/api/users', { profile: store.state.userProfile }).then((response) => {
+        commit('SET_USER_PROFILE', { profile: response.data });
       }, (err) => {
         console.error(err);
       });
