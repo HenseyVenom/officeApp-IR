@@ -56,6 +56,21 @@
 import { mapState } from 'vuex';
 export default {
   name: 'userslist',
+  data: () => {
+    return {
+      user: {
+        name: '',
+        surname: '',
+        email: '',
+        role: 'Guest', // initial value
+        accepted: '',
+        description: '',
+        phone: '',
+        position: '',
+        office: 'Office 1', // initial value
+      },
+    };
+  },
   computed: mapState([
     'users'
   ]),

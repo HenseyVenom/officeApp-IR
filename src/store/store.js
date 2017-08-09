@@ -19,7 +19,7 @@ const store = new Vuex.Store({
     isLoggedIn: !!localStorage.getItem('token'),
   },
 
-  // Actions are where you define the calls that will commit changes to your store.
+  /* eslint-disable no-alert, no-console */
   actions: {
     LOAD_USERS_LIST({ commit }) {
       return axios.get('http://localhost:4040/api/users').then((response) => {
@@ -50,6 +50,9 @@ const store = new Vuex.Store({
         console.error(err);
       });
     },
+
+    /* eslint-enable no-alert */
+
     LOG_IN({ commit }) {
       commit('LOGIN');
       return new Promise((resolve) => {
@@ -69,7 +72,7 @@ const store = new Vuex.Store({
   // The mutations calls are the only place that the store can be updated.
   mutations: {
     SET_USERS_LIST(state, { list }) {
-      state.users = list;
+      state.users = list; // eslint-disable-line
     },
     SET_NEW_USER(state, list) {
       state.users.push(list);
@@ -88,14 +91,14 @@ const store = new Vuex.Store({
       foundUser.white = user.white;
     },
     LOGIN(state) {
-      state.pending = true;
+      state.pending = true; // eslint-disable-line
     },
     LOGIN_SUCCESS(state) {
-      state.isLoggedIn = true;
-      state.pending = false;
+      state.isLoggedIn = true; // eslint-disable-line
+      state.pending = false; // eslint-disable-line
     },
     LOGOUT(state) {
-      state.isLoggedIn = false;
+      state.isLoggedIn = false; // eslint-disable-line
     },
 
   },
