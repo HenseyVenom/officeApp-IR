@@ -38,11 +38,11 @@
             </a>
           </td>
           <td>
-            <router-link to='/dashboard/usersupdateform'>
-              <a>
-                <img src="assets/edit.png" />
-              </a>
-            </router-link>
+  
+            <a @click="edit(user)">
+              <img src="assets/edit.png" />
+            </a>
+  
           </td>
         </tr>
       </tbody>
@@ -56,23 +56,8 @@
 import { mapState } from 'vuex';
 export default {
   name: 'userslist',
-  data: () => {
-    return {
-      user: {
-        name: '',
-        surname: '',
-        email: '',
-        role: 'Guest', // initial value
-        accepted: '',
-        description: '',
-        phone: '',
-        position: '',
-        office: 'Office 1', // initial value
-      },
-    };
-  },
   computed: mapState([
-    'users'
+    'users',
   ]),
   mounted() {
     this.$store.dispatch('LOAD_USERS_LIST');
@@ -81,6 +66,9 @@ export default {
     del(user) {
       this.$store.dispatch('DELETE_USER', user);
     },
+    edit(user) {
+      this.$router.push({name: 'dashboard.usersupdateform', params: user });
+    }
   }
 }
 </script>   
@@ -93,19 +81,22 @@ export default {
   padding-right: 100px;
   overflow: auto;
 }
-
-
 .table-title {
   background-color: #303030;
   color: white;
   ;
 }
-
 .tools {
   text-align: right;
   display: block !important;
   padding: 10px !important;
   background-color: white;
   color: black;
+}
+.line {
+  border: 0 !important;
+  background-color: #FFFFFF;
+  width: auto;
+  border-radius: 5px;
 }
 </style>

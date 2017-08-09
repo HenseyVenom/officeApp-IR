@@ -67,7 +67,7 @@ export default [
       },
       {
         name: 'dashboard.usersupdateform',
-        path: 'usersupdateform',
+        path: 'usersupdateform/:id?',
         component: UsersUpdateFormView,
       },
       {
