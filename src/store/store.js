@@ -3,6 +3,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
+import vuexCache from 'vuex-cache';
 
 Vue.use(Vuex);
 
@@ -17,20 +18,28 @@ const store = new Vuex.Store({
     // In our app, we need to know if the user is logged in
     // by checking if the user has a token in the browser local storage.
     isLoggedIn: !!localStorage.getItem('token'),
+    flag: false,
   },
+
+  plugins: [vuexCache],
 
   // Actions are where you define the calls that will commit changes to your store.
   actions: {
-    LOAD_USERS_LIST({ commit }) {
+    LOAD_USERS_LIST({ commit, state }) {
+      if (state.flag) {
+        return Promise.resolve();
+      }
       return axios.get('http://localhost:4040/api/users').then((response) => {
         commit('SET_USERS_LIST', { list: response.data });
+        commit('CHANGE_FLAG');
       }, (err) => {
         console.log(err);
       });
     },
     ADD_NEW_USER({ commit }, user) {
-      commit('SET_NEW_USER', user);
-      return axios.post('http://localhost:4040/api/users', user).then(() => {
+      return axios.post('http://localhost:4040/api/users', user).then((response) => {
+        commit('SET_NEW_USER', response.data);
+        console.log(response);
       }, (err) => {
         console.log(err);
       });
@@ -96,6 +105,9 @@ const store = new Vuex.Store({
     },
     LOGOUT(state) {
       state.isLoggedIn = false;
+    },
+    CHANGE_FLAG(state) {
+      state.flag = true;
     },
 
   },

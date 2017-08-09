@@ -25,7 +25,8 @@
     "vuelidate": "^0.5.0",
     "vuetable": "^1.5.12",
     "vuetify": "^0.14.7",
-    "vuex": "^2.3.1"
+    "vuex": "^2.3.1",
+    "vuex-cache": "^0.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
