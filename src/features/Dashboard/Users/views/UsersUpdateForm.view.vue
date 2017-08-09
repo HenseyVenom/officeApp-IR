@@ -1,7 +1,7 @@
 <template>
     <div class="containe2">
         <form class="form-control bord" @submit.prevent="validateBeforeSubmit">
-            <legend>Add user</legend>
+            <legend>Update user</legend>
     
             <div class="column is-12">
                 <label class="label">Name</label>
@@ -95,50 +95,49 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'usersupdateform',
-  data: () => {
-    return {
-      user: {
-        name: '',
-        surname: '',
-        email: '',
-        role: 'Guest', // initial value
-        accepted: '',
-        description: '',
-        phone: '',
-        position: '',
-        office: 'Office 1', // initial value
-      },
-    };
-  },
-   created () {
-    // fetch the data when the view is created and the data is
-    // already being observed
-    this.fetchData()
-  },
-  methods: {
-    cancel() {
-      this.$router.push('/dashboard/userslist');
+    name: 'usersupdateform',
+    data: () => {
+        return {
+            user: {
+                name: '',
+                surname: '',
+                email: '',
+                role: 'Guest', // initial value
+                accepted: '',
+                description: '',
+                phone: '',
+                position: '',
+                office: 'Office 1', // initial value
+            },
+        };
     },
-    validateBeforeSubmit() {
-      this.$validator.validateAll().then(result => {
-        if (result) {
-          this.$store.dispatch('UPDATE_USER_PROFILE', this.user).then((response) => {
+    created() {
+        // fetch the data when the view is created and the data is
+        // already being observed
+        this.fetchData()
+    },
+    methods: {
+        cancel() {
             this.$router.push('/dashboard/userslist');
-          });
-        } else {
-
+        },
+        validateBeforeSubmit() {
+            this.$validator.validateAll().then(result => {
+                if (result) {
+                    this.$store.dispatch('UPDATE_USER_PROFILE', this.user).then(() => {                   
+                    });
+                } else {
+                }
+                this.$router.push('/dashboard/userslist');
+            });
+        },
+        fetchData() {
+            if (typeof this.$route.params.id !== 'undefined') {
+                return axios.get('http://localhost:4040/api/users/' + this.$route.params.id).then((response) => {
+                    this.user = response.data;
+                });
+            }
         }
-      });
     },
-    fetchData () {
-if (typeof this.$route.params.id !== 'undefined') {
-      return axios.get('http://localhost:4040/api/users/' + this.$route.params.id).then((response) => {
-          this.user = response.data;
-      });
-}
-    }
-  },
 }
 </script>
 <style>

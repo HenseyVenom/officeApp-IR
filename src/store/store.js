@@ -52,9 +52,9 @@ const store = new Vuex.Store({
       });
     },
     UPDATE_USER_PROFILE({ commit }, user) {
-      commit('UPDATE_USER_PROFILE', user);
-      axios.put('http://localhost:4040/api/users').then((response) => {
-        console.log(response);
+      commit('UPDATE_USER', user);
+      return axios.put(`http://localhost:4040/api/users/${user.id}`, user).then(() => {
+        commit('CHANGE_FLAG_FALSE');
       }, (err) => {
         console.error(err);
       });
@@ -87,7 +87,7 @@ const store = new Vuex.Store({
       const id = state.users.map(user => user.id).indexOf(account);
       state.users.splice(id, 1);
     },
-    UPDATE_USER_PROFILE(state, user) {
+    UPDATE_USER(state, user) {
       const foundUser = state.users.find(x => x.id === user.id);
       foundUser.name = user.name;
       foundUser.surname = user.surname;
@@ -108,6 +108,9 @@ const store = new Vuex.Store({
     },
     CHANGE_FLAG(state) {
       state.flag = true;
+    },
+    CHANGE_FLAG_FALSE(state) {
+      state.flag = false;
     },
 
   },

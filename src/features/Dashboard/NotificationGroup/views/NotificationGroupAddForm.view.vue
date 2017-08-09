@@ -21,6 +21,14 @@ export default {
         enable: true,
       },
     };
+  },
+  mounted() {
+    var vm = this
+    $('#datedate').datepicker({
+      onSelect: function (dateText) {
+        vm.date = dateText
+      }
+    })
   }
 }
 </script>

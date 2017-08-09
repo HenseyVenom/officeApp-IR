@@ -12,6 +12,7 @@ import DashboardRoutes from 'features/Dashboard/dashboard.routes';
 import 'common/components'; // same as from '../../../common/components/index.js';
 import VeeValidate from 'vee-validate';
 import Jquery from 'jquery';
+import JqueryUI from 'jquery-ui';
 import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 import Bootstrap from 'bootstrap';
 
