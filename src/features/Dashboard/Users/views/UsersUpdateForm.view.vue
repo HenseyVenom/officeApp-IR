@@ -123,11 +123,11 @@ export default {
         validateBeforeSubmit() {
             this.$validator.validateAll().then(result => {
                 if (result) {
-                    this.$store.dispatch('UPDATE_USER_PROFILE', this.user).then(() => {                   
+                    this.$store.dispatch('UPDATE_USER_PROFILE', this.user).then(() => {
                     });
                 } else {
                 }
-                this.$router.push('/dashboard/userslist');
+                this.$router.push('/dashboard/userslist');  
             });
         },
         fetchData() {
