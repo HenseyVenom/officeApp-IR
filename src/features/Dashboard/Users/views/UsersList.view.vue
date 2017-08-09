@@ -38,11 +38,9 @@
             </a>
           </td>
           <td>
-  
             <a @click="edit(user)">
               <img src="assets/edit.png" />
             </a>
-  
           </td>
         </tr>
       </tbody>
@@ -67,7 +65,7 @@ export default {
       this.$store.dispatch('DELETE_USER', user);
     },
     edit(user) {
-      this.$router.push({name: 'dashboard.usersupdateform', params: user });
+      this.$router.push({ name: 'dashboard.usersupdateform', params: user });
     }
   }
 }

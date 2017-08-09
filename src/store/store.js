@@ -31,7 +31,7 @@ const store = new Vuex.Store({
       }
       return axios.get('http://localhost:4040/api/users').then((response) => {
         commit('SET_USERS_LIST', { list: response.data });
-        commit('CHANGE_FLAG');
+        commit('CHANGE_FLAG_TRUE');
       }, (err) => {
         console.log(err);
       });
@@ -52,9 +52,9 @@ const store = new Vuex.Store({
       });
     },
     UPDATE_USER_PROFILE({ commit }, user) {
-      commit('UPDATE_USER_PROFILE', user);
-      axios.put('http://localhost:4040/api/users').then((response) => {
-        console.log(response);
+      commit('UPDATE_USER', user);
+      return axios.put(`http://localhost:4040/api/users/${user.id}`, user).then(() => {
+        commit('CHANGE_FLAG_FALSE');
       }, (err) => {
         console.error(err);
       });
@@ -87,7 +87,7 @@ const store = new Vuex.Store({
       const id = state.users.map(user => user.id).indexOf(account);
       state.users.splice(id, 1);
     },
-    UPDATE_USER_PROFILE(state, user) {
+    UPDATE_USER(state, user) {
       const foundUser = state.users.find(x => x.id === user.id);
       foundUser.name = user.name;
       foundUser.surname = user.surname;
@@ -95,6 +95,10 @@ const store = new Vuex.Store({
       foundUser.role = user.role;
       foundUser.accepted = user.accepted;
       foundUser.white = user.white;
+      foundUser.description = user.description;
+      foundUser.phone = user.phone;
+      foundUser.position = user.position;
+      foundUser.office = user.office;
     },
     LOGIN(state) {
       state.pending = true;
@@ -106,8 +110,11 @@ const store = new Vuex.Store({
     LOGOUT(state) {
       state.isLoggedIn = false;
     },
-    CHANGE_FLAG(state) {
+    CHANGE_FLAG_TRUE(state) {
       state.flag = true;
+    },
+    CHANGE_FLAG_FALSE(state) {
+      state.flag = false;
     },
 
   },
