@@ -15,7 +15,7 @@
     <router-link to="/dashboard/beaconsaddform">
       <btn-navitem type="submit" caption="Beacons"></btn-navitem>
     </router-link>
-    <router-link to="/dashboard/userslist">
+    <router-link to="/dashboard/requeststopicsaddform">
       <btn-navitem type="submit" caption="Requests"></btn-navitem>
     </router-link>
     <router-link to="/dashboard/requeststopicsaddform">

@@ -124,10 +124,11 @@ export default {
             this.$validator.validateAll().then(result => {
                 if (result) {
                     this.$store.dispatch('UPDATE_USER_PROFILE', this.user).then(() => {
+                        alert("User was updated");
                     });
                 } else {
                 }
-                this.$router.push('/dashboard/userslist');  
+                this.$router.push('/dashboard/userslist');
             });
         },
         fetchData() {

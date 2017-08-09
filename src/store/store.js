@@ -31,7 +31,7 @@ const store = new Vuex.Store({
       }
       return axios.get('http://localhost:4040/api/users').then((response) => {
         commit('SET_USERS_LIST', { list: response.data });
-        commit('CHANGE_FLAG');
+        commit('CHANGE_FLAG_TRUE');
       }, (err) => {
         console.log(err);
       });
@@ -95,6 +95,10 @@ const store = new Vuex.Store({
       foundUser.role = user.role;
       foundUser.accepted = user.accepted;
       foundUser.white = user.white;
+      foundUser.description = user.description;
+      foundUser.phone = user.phone;
+      foundUser.position = user.position;
+      foundUser.office = user.office;
     },
     LOGIN(state) {
       state.pending = true;
@@ -106,7 +110,7 @@ const store = new Vuex.Store({
     LOGOUT(state) {
       state.isLoggedIn = false;
     },
-    CHANGE_FLAG(state) {
+    CHANGE_FLAG_TRUE(state) {
       state.flag = true;
     },
     CHANGE_FLAG_FALSE(state) {
