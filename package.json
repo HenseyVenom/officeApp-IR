@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "axios": "^0.16.2",
     "bootstrap": "^4.0.0-alpha.6",
     "bootstrap-table": "^1.11.2",

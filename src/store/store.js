@@ -20,6 +20,7 @@ const store = new Vuex.Store({
     isLoggedIn: !!localStorage.getItem('token'),
     // When flag is false, app must fetch data from server
     flag: false,
+    date: '',
   },
 
   plugins: [vuexCache],
@@ -117,7 +118,6 @@ const store = new Vuex.Store({
     CHANGE_FLAG_FALSE(state) {
       state.flag = false;
     },
-
   },
 
   // Getters are a way to grab computed data from the store

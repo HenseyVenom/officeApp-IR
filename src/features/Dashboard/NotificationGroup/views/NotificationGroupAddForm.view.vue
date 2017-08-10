@@ -1,10 +1,11 @@
 <template>
   <div class="containe2">
     <form class="form-control bord">
-      <legend>Add group</legend>
-      <label>Name</label>
-      <input-panel></input-panel>
+      <legend>It's simple datepicker</legend>
+      <label>Select date</label>
       <br/>
+      <date-picker :date="date" v-model="date"></date-picker>
+      <p class="title">You have Selected: {{date}} </p>
       <my-button class="btn btn-sm btn-block btn-success " caption="Save"></my-button>
       <my-button class="btn btn-sm btn-block btn-danger" caption="Cancel"></my-button>
     </form>
@@ -13,6 +14,7 @@
 
 
 <script>
+import { mapState } from 'vuex';
 export default {
   name: 'notificationgroupaddform',
   data: () => {
@@ -20,16 +22,9 @@ export default {
       level: {
         enable: true,
       },
+      date: '',
     };
   },
-  mounted() {
-    var vm = this
-    $('#datedate').datepicker({
-      onSelect: function (dateText) {
-        vm.date = dateText
-      }
-    })
-  }
 }
 </script>
 
@@ -43,5 +38,10 @@ export default {
 
 .bord {
   border: 1px dashed #FF3300 !important;
+}
+
+.title {
+  color: green;
+  font-weight: bold;
 }
 </style>

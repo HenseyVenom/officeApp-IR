@@ -1,29 +1,33 @@
-<template>
-    <p>
-        Date:
-        <input type="text" id="datepicker"></input>
-    </p>
+<template id="date-picker">
+    <div>
+        <input-panel class="datepicker-here" placeholder="Type date ..." data-language='en' @input="$emit('input', $event.target.value)" :value="date" v-date-picker/>
+    </div>
 </template>
 
 <script>
-import jquery from 'jquery';
-import jqueryui from 'jquery-ui';
-$(document).ready(function () {
-    (function ($) {
-        $("#datepicker").datepicker();
-    });
-}(jQuery));
-
+import $ from 'jquery';
 export default {
-    props: ['caption'],
     name: 'date-picker',
-    methods: {
-        click() {
-            this.$emit('click');
+    template: '#date-picker',
+    props: {
+        date: {
+            default: '',
+            type: String,
         },
-
     },
-};
+    directives: {
+        datePicker: {
+            bind(el, binding, vnode) {
+                $(el).datepicker({
+                    onSelect(val) {
+                        vnode.context.$emit('input', val);
+                    },
+                });
+            },
+        },
+    },
+
+}
 </script>
 
 <style>
