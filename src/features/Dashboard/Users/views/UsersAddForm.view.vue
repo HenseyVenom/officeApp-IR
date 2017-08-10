@@ -85,9 +85,8 @@
         <option>Office 4</option>
         <option>Office 5</option>
       </select>
-  
-      <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel" @click="cancel"></buttonhut>
+      <my-button class="btn btn-sm btn-block btn-success " caption="Save"></my-button>
+      <my-button class="btn btn-sm btn-block btn-danger" caption="Cancel" @click="cancel"></my-button>
     </form>
   </div>
 </template>

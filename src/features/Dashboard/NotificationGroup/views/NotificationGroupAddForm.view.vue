@@ -5,8 +5,8 @@
       <label>Name</label>
       <input-panel></input-panel>
       <br/>
-      <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
-      <buttonhut class="btn btn-sm" caption="Cancel"></buttonhut>
+      <my-button class="btn btn-sm btn-block btn-success " caption="Save"></my-button>
+      <my-button class="btn btn-sm btn-block btn-danger" caption="Cancel"></my-button>
     </form>
   </div>
 </template>

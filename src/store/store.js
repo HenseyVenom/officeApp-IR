@@ -18,6 +18,7 @@ const store = new Vuex.Store({
     // In our app, we need to know if the user is logged in
     // by checking if the user has a token in the browser local storage.
     isLoggedIn: !!localStorage.getItem('token'),
+    // When flag is false, app must fetch data from server
     flag: false,
   },
 
