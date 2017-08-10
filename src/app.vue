@@ -9,11 +9,11 @@ import store from './store/store';
 import VueRouter from 'vue-router/dist/vue-router';
 import LoginRoutes from 'features/Login/login.routes';
 import DashboardRoutes from 'features/Dashboard/dashboard.routes';
-import 'common/components'; // same as from '../../../common/components/index.js';
+import 'common/components'; 
 import VeeValidate from 'vee-validate';
-import Jquery from 'jquery';
-import BootstrapCSS from 'bootstrap/dist/css/bootstrap.css';
 import Bootstrap from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 Vue.use(VueRouter);
 Vue.use(VeeValidate);

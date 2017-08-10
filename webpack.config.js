@@ -47,6 +47,16 @@ const getRules = () => [
       loader: 'json-loader',
     }],
   }, {
+    test: /\.(png|jpg|gif)$/,
+    use: [
+      {
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+        },
+      },
+    ],
+  }, {
     test: /\.(jpg|jpeg|png)?$/,
     exclude: [/node_modules/],
     use: [{

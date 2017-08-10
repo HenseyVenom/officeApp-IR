@@ -10,6 +10,8 @@ import NavigationItem from './NavigationBar/NavigationItem.vue';
 import InputSelect from './Inputs/InputSelect.vue';
 import InputCheckBox from './Inputs/InputCheckBox.vue';
 import InputAddFile from './Inputs/InputAddFile.vue';
+import DatePicker from './Datepicker/DatePicker.vue';
+// import DatePicker from './Datepicker/DatePickerVue.vue';
 
 Vue.component(ButtonHut.name, ButtonHut);
 Vue.component(InputPanel.name, InputPanel);
@@ -21,3 +23,4 @@ Vue.component(NavigationItem.name, NavigationItem);
 Vue.component(InputSelect.name, InputSelect);
 Vue.component(InputCheckBox.name, InputCheckBox);
 Vue.component(InputAddFile.name, InputAddFile);
+Vue.component(DatePicker.name, DatePicker);

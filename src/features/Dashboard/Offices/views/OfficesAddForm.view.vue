@@ -9,6 +9,8 @@
       <label>Location</label>
       <input-panel></input-panel>
       <input-checkbox caption="Enable" checked></input-checkbox>
+      <!-- <datepicker-vue :readonly="true" format="YYYY-MM-DD" v-model="date"></datepicker-vue>  -->
+      <q-datetime type="date"></q-datetime>
       <input-addfile content="Image"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm btn-danger" caption="Cancel"></buttonhut>
@@ -20,6 +22,7 @@
 <script>
 export default {
   name: 'officesaddform',
+
 }
 </script>
 
