@@ -25,6 +25,9 @@ module.exports = {
     "linebreak-style": [0],
     "no-param-reassign": [0],
     "no-console": [0],
-    "no-undef": [0]
+    "no-undef": [0],
+    "import/no-unresolved": [0],
+    "import/extensions": [0],
+    "no-shadow": [0]
   }
 }

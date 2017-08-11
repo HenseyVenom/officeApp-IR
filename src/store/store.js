@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
-import vuexCache from 'vuex-cache';
+// import vuexCache from 'vuex-cache';
 
 Vue.use(Vuex);
 
@@ -13,7 +13,7 @@ export const state = {
   users: [],
   // In our app, we need to know if the user is logged in
   // by checking if the user has a token in the browser local storage.
-  // isLoggedIn: !!localStorage.getItem('token'),
+  isLoggedIn: !!localStorage.getItem('token'),
   // When flag is false, app must fetch data from server
   flag: false,
 };
@@ -113,7 +113,7 @@ export const mutations = {
   },
 };
 
-export const plugins = [vuexCache];
+// export const plugins = [vuexCache];
 
 // Getters are a way to grab computed data from the store
 // For example if you have a project list one component might only want to show projects
@@ -133,9 +133,9 @@ const store = new Vuex.Store({
   state,
   actions,
   mutations,
-  plugins,
   getters,
   modules,
+  // plugins,
 });
 
 export default store;

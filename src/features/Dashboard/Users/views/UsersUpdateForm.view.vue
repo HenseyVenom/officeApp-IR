@@ -86,7 +86,7 @@
                 <option>Office 5</option>
             </select>
     
-            <my-button class="btn btn-sm btn-block btn-success " caption="Save"></my-button>
+            <my-button class="btn btn-sm btn-block btn-success " caption="Update"></my-button>
             <my-button class="btn btn-sm btn-block btn-danger" caption="Cancel" @click="cancel"></my-button>
         </form>
     </div>
