@@ -1,4 +1,22 @@
 {
+  "presets": ["es2015"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "common": "./src/common",
+          "features": "./src/features"
+        }
+      }
+    ]
+  ]
+}
+
+/*{
   "presets": [
     [
       "latest",
@@ -23,4 +41,4 @@
       }
     ]
   ]
-}
+}*/

@@ -1,4 +1,3 @@
-# vue-boilerplate
 
 1. Install packages:
 
