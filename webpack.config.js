@@ -14,72 +14,71 @@ const DIST_PATH = path.resolve(__dirname, './dist');
 
 const environment = process.env.NODE_ENV === 'production' ? ENV.PRODUCTION : ENV.DEVELOPMENT;
 
-const getRules = () => [
-  {
-    test: /\.vue$/,
-    loader: 'vue-loader',
-    options: {
-      loaders: {
-        css: ExtractTextPlugin.extract({
-          use: 'css-loader',
-          fallback: 'vue-style-loader',
-        }),
-      },
+const getRules = () => [{
+  test: /\.vue$/,
+  loader: 'vue-loader',
+  options: {
+    loaders: {
+      css: ExtractTextPlugin.extract({
+        use: 'css-loader',
+        fallback: 'vue-style-loader',
+      }),
     },
   },
-  {
-    test: /\.css$/,
-    use: ExtractTextPlugin.extract({
-      fallback: 'style-loader',
-      use: 'css-loader',
-    }),
+}, {
+  test: /\.css$/,
+  use: ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: 'css-loader',
+  }),
+}, {
+  test: /\.js$/,
+  loader: 'babel-loader',
+  query: {
+    presets: ['es2015']
   },
-  {
-    test: /\.jsx?$/,
-    exclude: [/node_modules/],
-    use: [{
-      loader: 'babel-loader',
-    }],
-  }, {
-    test: /\.json?$/,
-    exclude: [/node_modules/],
-    use: [{
-      loader: 'json-loader',
-    }],
-  }, {
-    test: /\.(png|jpg|gif)$/,
+  include: [
+    path.resolve(__dirname, '../')
+  ],
+  exclude: /node_modules/
+}, {
+  test: /\.json?$/,
+  exclude: [/node_modules/],
+  use: [{
+    loader: 'json-loader',
+  }],
+}, {
+  test: /\.(jpe?g|png|gif|svg)$/i,
+  use: [{
+    loader: 'url-loader',
+    options: {
+      limit: 10000,
+    },
+  }],
+}, {
+  test: /\.(jpg|jpeg|png)?$/,
+  exclude: [/node_modules/],
+  use: [{
+    loader: 'file-loader?name=[path][name].[hash].[ext]',
+  }],
+}, {
+  test: /\.scss$/,
+  exclude: [/node_modules/],
+  loader: ExtractTextPlugin.extract({
+    fallback: 'style-loader',
     use: [
-      {
-        loader: 'url-loader',
+      'css-loader', {
+        loader: 'postcss-loader',
         options: {
-          limit: 8192,
-        },
-      },
-    ],
-  }, {
-    test: /\.(jpg|jpeg|png)?$/,
-    exclude: [/node_modules/],
-    use: [{
-      loader: 'file-loader?name=[path][name].[hash].[ext]',
-    }],
-  }, {
-    test: /\.scss$/,
-    exclude: [/node_modules/],
-    loader: ExtractTextPlugin.extract({
-      fallback: 'style-loader',
-      use: [
-        'css-loader', {
-          loader: 'postcss-loader',
-          options: {
-            plugins() {
-              return [autoprefixer];
-            },
+          plugins() {
+            return [autoprefixer];
           },
         },
-        'sass-loader',
-      ],
-    }),
-  },
+      },
+      'sass-loader',
+    ],
+  }),
+},
 ];
 
 const getPlugins = () => {

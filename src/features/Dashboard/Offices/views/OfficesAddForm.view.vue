@@ -8,9 +8,11 @@
       <input-panel></input-panel>
       <label>Location</label>
       <input-panel></input-panel>
-      <input-checkbox caption="Enable" checked></input-checkbox>
+      <input-checkbox caption="Enable"></input-checkbox>
       <!-- <datepicker-vue :readonly="true" format="YYYY-MM-DD" v-model="date"></datepicker-vue>  -->
-      <q-datetime type="date"></q-datetime>
+      <div class="block-input">
+        <date-picker @update-date="updateDate" date-format="yy-mm-dd" v-once></date-picker>
+      </div>
       <input-addfile content="Image"></input-addfile>
       <buttonhut class="btn btn-sm btn-success" caption="Save"></buttonhut>
       <buttonhut class="btn btn-sm btn-danger" caption="Cancel"></buttonhut>
@@ -22,6 +24,11 @@
 <script>
 export default {
   name: 'officesaddform',
+  methods: {
+    updateDate: function (date) {
+      this.date = date;
+    },
+  }
 
 }
 </script>
