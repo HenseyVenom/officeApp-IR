@@ -1,7 +1,7 @@
 // test.js
 
 import { expect } from 'chai';
-import { mutations } from './store/store.js';
+import { mutations } from 'store/store.js';
 
 const { SET_NEW_USER, CHANGE_FLAG_TRUE } = mutations;
 

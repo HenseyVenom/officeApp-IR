@@ -1,6 +1,6 @@
 <template>
   <div class="containe2">
-    <form class="form-control bord" @submit.prevent="validateBeforeSubmit">
+    <form class="form-control bord">
       <legend>Add user</legend>
   
       <div class="column is-12">
@@ -85,7 +85,7 @@
         <option>Office 4</option>
         <option>Office 5</option>
       </select>
-      <my-button class="btn btn-sm btn-block btn-success " caption="Save"></my-button>
+      <my-button class="btn btn-sm btn-block btn-success " caption="Save" @click="validateBeforeSubmit"></my-button>
       <my-button class="btn btn-sm btn-block btn-danger" caption="Cancel" @click="cancel"></my-button>
     </form>
   </div>
